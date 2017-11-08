@@ -1,6 +1,9 @@
+
 \documentclass{article}
 \usepackage[utf8]{inputenc}
 \usepackage{enumitem}
+\usepackage{tikz}
+
 
 \title{Computationele logica}
 \author{
@@ -38,5 +41,35 @@ Prove formally that, for every sentence \(\varphi\), the sentence
 Using the semantics of knowledge \(K_{a}\) and common knowledge \(Ck\), show that the following is NOT valid on \textit{epistemic models with (only) 2 agents a and b:}
 \[(K_{a}K_{b}\phi\wedge K_{b}K_{a}\psi) \Rightarrow Ck(\phi\wedge\psi)\]
 
+\begin{center}
+\begin{tikzpicture}[scale=0.2]
+\tikzstyle{every node}+=[inner sep=0pt]
+\draw [black] (13.5,-10.1) circle (3);
+\draw (13.5,-10.1) node {$P,\mbox{ }Q$};
+\draw [black] (31,-10.1) circle (3);
+\draw (31,-10.1) node {$P$};
+\draw [black] (13.5,-26.2) circle (3);
+\draw (13.5,-26.2) node {$Q$};
+\draw [black] (13.5,-13.1) -- (13.5,-23.2);
+\fill [black] (13.5,-23.2) -- (14,-22.4) -- (13,-22.4);
+\draw [black] (16.7,-10.1) -- (28,-10.1);
+\fill [black] (28,-10.1) -- (27.2,-9.6) -- (27.2,-10.6);
+\draw [black] (13.5,-23.2) -- (13.5,-13.1);
+\fill [black] (13.5,-13.1) -- (13,-13.9) -- (14,-13.9);
+\draw (14,-18.15) node [right] {$b$};
+\draw [black] (28,-10.1) -- (16.5,-10.1);
+\fill [black] (16.5,-10.1) -- (17.3,-10.6) -- (17.3,-9.6);
+\draw (22.25,-9.6) node [above] {$a$};
+\draw [black] (10.551,-9.619) arc (288.46232:0.46232:2.25);
+\draw (7.42,-4.8) node [left] {$a,\mbox{ }b$};
+\fill [black] (12.09,-7.47) -- (12.31,-6.55) -- (11.36,-6.87);
+\draw [black] (31.331,-7.13) arc (201.38076:-86.61924:2.25);
+\draw (36.58,-3.91) node [above] {$a,\mbox{ }b$};
+\fill [black] (33.56,-8.56) -- (34.49,-8.73) -- (34.12,-7.8);
+\draw [black] (10.515,-26.06) arc (295.04488:7.04488:2.25);
+\draw (6.93,-21.73) node [left] {$a,\mbox{ }b$};
+\fill [black] (11.8,-23.75) -- (11.91,-22.81) -- (11,-23.23);
+\end{tikzpicture}
+\end{center}
 
 \end{document}
