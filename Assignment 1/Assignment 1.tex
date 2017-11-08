@@ -1,19 +1,22 @@
 
-\documentclass{article}
+\documentclass[leqno]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{enumitem}
 \usepackage{tikz}
+\usepackage[parfill]{parskip} % Don't start new paragraph with tab.
+\usepackage{amsmath} % For \tag and \eqref
+
 
 
 \title{Computationele logica}
 \author{
     Kamans, Jim\\
-    \texttt{-000000001}
+    \texttt{10302905}
     \and
-    Roosingh Sander\\
+    Roosingh, Sander\\
     \texttt{11983957}
     \and
-    \small Stefan Schenk\\
+    Schenk, Stefan\\
     \texttt{11881798}
 }
 \date{November 2017}
@@ -35,7 +38,23 @@
 \section{Exercise 2}
 Prove formally that, for every sentence \(\varphi\), the sentence
 \[\neg K_{a}\varphi \Rightarrow K_{a}\neg K_{a}\varphi\]
-(expressing "Negative Introspection of Knowledge") is \textit{valid} on (the family of all) \textbf{epistemic} models.
+(expressing ``Negative Introspection of Knowledge'') is \textit{valid} on (the family of all) \textbf{epistemic} models.
+
+Let $M = \{W, R_a, R_b, \dots, \nu\}$ be any epistemic model and let $w \in W$ be any world in it.
+
+To prove the claim, suppose that $\neg K_a \varphi$ is true at $w$, i.e.
+\begin{equation}
+	\tag{1} \label{eq:ex2_1}
+	w \models_M \neg K_a \varphi.
+\end{equation}
+We need to prove that
+\begin{equation}
+	\tag{?} \label{eq:ex2_?}
+	w \models_M K_a \neg K_a \varphi.
+\end{equation}
+Let $v$ be an arbitrary world such that $w R_a v$.
+By the semantics of $K_a$, \eqref{eq:ex2_1} implies
+
 
 \section{Exercise 3}
 Using the semantics of knowledge \(K_{a}\) and common knowledge \(Ck\), show that the following is NOT valid on \textit{epistemic models with (only) 2 agents a and b:}
