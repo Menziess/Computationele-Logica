@@ -1,11 +1,9 @@
-
 \documentclass[leqno]{article}
 \usepackage[utf8]{inputenc}
 \usepackage{enumitem}
 \usepackage{tikz}
 \usepackage[parfill]{parskip} % Don't start new paragraph with tab.
 \usepackage{amsmath} % For \tag and \eqref
-
 
 
 \title{Computationele logica}
@@ -27,12 +25,19 @@
 
 \section{Exercise 1: Singapore problem}
 
+$ \phi $ = date of Cheryl's birthday
+
 \begin{enumerate}[label=(\alph*)]
-    \item one
-    \item two
-    \item three
-    \item four
-    \item five
+    \item Model M of the situation immediately after Cheryl gives the boys their pieces of information: \\
+
+    \item Epistemic sentence encoding Albert's first announcement: \\
+    $ !_a (\neg K_a \phi \wedge K_a \neg K_b \phi) $
+
+    \item Updated model M' after Albert's first announcement: \\
+    \item Epistemic sentence and updated model M'' after Bernard's announcement: \\
+    $ !_b (K_b \phi) $
+    \item Epistemic sentence and updated model M''' after Albert's second announcement: \\
+    $ !_a (K_a \phi) $
 \end{enumerate}
 
 \section{Exercise 2}
@@ -58,13 +63,20 @@ By the semantics of $K_a$, \eqref{eq:ex2_1} implies
 
 \section{Exercise 3}
 Using the semantics of knowledge \(K_{a}\) and common knowledge \(Ck\), show that the following is NOT valid on \textit{epistemic models with (only) 2 agents a and b:}
+
 \[(K_{a}K_{b}\phi\wedge K_{b}K_{a}\psi) \Rightarrow Ck(\phi\wedge\psi)\]
+
+* = The representation of the world \\
+P = $ \phi $ \\
+Q = $ \psi $ \\
+\\
+The epistemic model holds the beliefs that both a and b know P and Q, but they are not sure whether they know the fact that both a and b know P and Q.
 
 \begin{center}
 \begin{tikzpicture}[scale=0.2]
 \tikzstyle{every node}+=[inner sep=0pt]
 \draw [black] (13.5,-10.1) circle (3);
-\draw (13.5,-10.1) node {$P,\mbox{ }Q$};
+\draw (13.5,-10.1) node {$* P,\mbox{ }Q$};
 \draw [black] (31,-10.1) circle (3);
 \draw (31,-10.1) node {$P$};
 \draw [black] (13.5,-26.2) circle (3);
