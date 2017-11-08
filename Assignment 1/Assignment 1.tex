@@ -25,19 +25,160 @@
 
 \section{Exercise 1: Singapore problem}
 
-$ \phi $ = date of Cheryl's birthday
+$\phi$ = date of Cheryl's birthday \\
+a = Albert, b = Bernard, c = Cheryl \\
+\\
+With arrows we are representing the children’s knowledge relations, so we’ll get an epistemic model: all relations R1, R2, R3 are equivalence relations. So in particular they are reflexive, but for simplicity of drawing we skipped the loops.
+\\
 
 \begin{enumerate}[label=(\alph*)]
     \item Model M of the situation immediately after Cheryl gives the boys their pieces of information: \\
 
+    \begin{center}
+    \begin{tikzpicture}[scale=0.2]
+    \tikzstyle{every node}+=[inner sep=0pt]
+    \draw [black] (9.383,-12.68) circle (3);
+    \draw (9.38,-12.68) node {$May15$};
+    \draw [black] (20.663,-25.854) circle (3);
+    \draw (20.66,-25.85) node {$June17$};
+    \draw [black] (9.383,-20.483) circle (3);
+    \draw (9.38,-20.48) node {$May16$};
+    \draw [black] (9.383,-37.949) circle (3);
+    \draw (9.38,-37.95) node {$May19$};
+    \draw [black] (20.663,-34.949) circle (3);
+    \draw (20.66,-34.95) node {$June18$};
+    \draw [black] (31.01,-20.483) circle (3);
+    \draw (31.01,-20.48) node {$Juli16$};
+    \draw [black] (31.01,-4.832) circle (3);
+    \draw (31.01,-4.83) node {$Juli14$};
+    \draw [black] (41.568,-4.832) circle (3);
+    \draw (41.57,-4.83) node {$Aug14$};
+    \draw [black] (41.568,-12.68) circle (3);
+    \draw (41.57,-12.68) node {$Aug15$};
+    \draw [black] (41.568,-25.854) circle (3);
+    \draw (41.57,-25.85) node {$Aug17$};
+    \draw [black] (12.38,-20.48) -- (28.01,-20.48);
+    \fill [black] (28.01,-20.48) -- (27.21,-19.98) -- (27.21,-20.98);
+    \draw (20.2,-20.98) node [below] {$b$};
+    \draw [black] (12.38,-12.68) -- (38.57,-12.68);
+    \fill [black] (38.57,-12.68) -- (37.77,-12.18) -- (37.77,-13.18);
+    \draw (25.48,-13.18) node [below] {$b$};
+    \draw [black] (34.01,-4.83) -- (38.57,-4.83);
+    \fill [black] (38.57,-4.83) -- (37.77,-4.33) -- (37.77,-5.33);
+    \draw (36.29,-5.33) node [below] {$b$};
+    \draw [black] (23.66,-25.85) -- (38.57,-25.85);
+    \fill [black] (38.57,-25.85) -- (37.77,-25.35) -- (37.77,-26.35);
+    \draw (31.12,-26.35) node [below] {$b$};
+    \draw [black] (28.01,-20.48) -- (12.38,-20.48);
+    \fill [black] (12.38,-20.48) -- (13.18,-20.98) -- (13.18,-19.98);
+    \draw [black] (38.57,-12.68) -- (12.38,-12.68);
+    \fill [black] (12.38,-12.68) -- (13.18,-13.18) -- (13.18,-12.18);
+    \draw [black] (38.57,-25.85) -- (23.66,-25.85);
+    \fill [black] (23.66,-25.85) -- (24.46,-26.35) -- (24.46,-25.35);
+    \draw [black] (38.57,-4.83) -- (34.01,-4.83);
+    \fill [black] (34.01,-4.83) -- (34.81,-5.33) -- (34.81,-4.33);
+    \draw [black] (20.66,-28.85) -- (20.66,-31.95);
+    \fill [black] (20.66,-31.95) -- (21.16,-31.15) -- (20.16,-31.15);
+    \draw (20.16,-30.4) node [left] {$a$};
+    \draw [black] (20.66,-31.95) -- (20.66,-28.85);
+    \fill [black] (20.66,-28.85) -- (20.16,-29.65) -- (21.16,-29.65);
+    \draw [black] (9.38,-23.48) -- (9.38,-34.95);
+    \fill [black] (9.38,-34.95) -- (9.88,-34.15) -- (8.88,-34.15);
+    \draw (8.88,-29.22) node [left] {$a$};
+    \draw [black] (9.38,-34.95) -- (9.38,-23.48);
+    \fill [black] (9.38,-23.48) -- (8.88,-24.28) -- (9.88,-24.28);
+    \draw [black] (9.38,-17.48) -- (9.38,-15.68);
+    \fill [black] (9.38,-15.68) -- (8.88,-16.48) -- (9.88,-16.48);
+    \draw [black] (9.38,-15.68) -- (9.38,-17.48);
+    \fill [black] (9.38,-17.48) -- (9.88,-16.68) -- (8.88,-16.68);
+    \draw (8.88,-16.58) node [left] {$a$};
+    \draw [black] (31.01,-7.83) -- (31.01,-17.48);
+    \fill [black] (31.01,-17.48) -- (31.51,-16.68) -- (30.51,-16.68);
+    \draw [black] (31.01,-17.48) -- (31.01,-7.83);
+    \fill [black] (31.01,-7.83) -- (30.51,-8.63) -- (31.51,-8.63);
+    \draw (31.51,-12.66) node [right] {$a$};
+    \draw [black] (41.57,-9.68) -- (41.57,-7.83);
+    \fill [black] (41.57,-7.83) -- (41.07,-8.63) -- (42.07,-8.63);
+    \draw [black] (41.57,-7.83) -- (41.57,-9.68);
+    \fill [black] (41.57,-9.68) -- (42.07,-8.88) -- (41.07,-8.88);
+    \draw (41.07,-8.76) node [left] {$a$};
+    \draw [black] (41.57,-15.7) -- (41.57,-22.85);
+    \fill [black] (41.57,-22.85) -- (42.07,-22.05) -- (41.07,-22.05);
+    \draw [black] (41.57,-22.85) -- (41.57,-15.68);
+    \fill [black] (41.57,-15.68) -- (41.07,-16.48) -- (42.07,-16.48);
+    \draw (42.07,-19.27) node [right] {$a$};
+    \end{tikzpicture}
+    \end{center}
+
     \item Epistemic sentence encoding Albert's first announcement: \\
-    $ !_a (\neg K_a \phi \wedge K_a \neg K_b \phi) $
+    $!_a (\neg K_a \phi \wedge K_a \neg K_b \phi)$
 
     \item Updated model M' after Albert's first announcement: \\
+    \begin{center}
+    \begin{tikzpicture}[scale=0.2]
+    \tikzstyle{every node}+=[inner sep=0pt]
+    \draw [black] (31.01,-20.483) circle (3);
+    \draw (31.01,-20.48) node {$Juli16$};
+    \draw [black] (31.01,-4.832) circle (3);
+    \draw (31.01,-4.83) node {$Juli14$};
+    \draw [black] (41.568,-4.832) circle (3);
+    \draw (41.57,-4.83) node {$Aug14$};
+    \draw [black] (41.568,-12.68) circle (3);
+    \draw (41.57,-12.68) node {$Aug15$};
+    \draw [black] (41.568,-25.854) circle (3);
+    \draw (41.57,-25.85) node {$Aug17$};
+    \draw [black] (34.01,-4.83) -- (38.57,-4.83);
+    \fill [black] (38.57,-4.83) -- (37.77,-4.33) -- (37.77,-5.33);
+    \draw (36.29,-5.33) node [below] {$b$};
+    \draw [black] (38.57,-4.83) -- (34.01,-4.83);
+    \fill [black] (34.01,-4.83) -- (34.81,-5.33) -- (34.81,-4.33);
+    \draw [black] (31.01,-7.83) -- (31.01,-17.48);
+    \fill [black] (31.01,-17.48) -- (31.51,-16.68) -- (30.51,-16.68);
+    \draw [black] (31.01,-17.48) -- (31.01,-7.83);
+    \fill [black] (31.01,-7.83) -- (30.51,-8.63) -- (31.51,-8.63);
+    \draw (31.51,-12.66) node [right] {$a$};
+    \draw [black] (41.57,-9.68) -- (41.57,-7.83);
+    \fill [black] (41.57,-7.83) -- (41.07,-8.63) -- (42.07,-8.63);
+    \draw [black] (41.57,-7.83) -- (41.57,-9.68);
+    \fill [black] (41.57,-9.68) -- (42.07,-8.88) -- (41.07,-8.88);
+    \draw (41.07,-8.76) node [left] {$a$};
+    \draw [black] (41.57,-15.7) -- (41.57,-22.85);
+    \fill [black] (41.57,-22.85) -- (42.07,-22.05) -- (41.07,-22.05);
+    \draw [black] (41.57,-22.85) -- (41.57,-15.68);
+    \fill [black] (41.57,-15.68) -- (41.07,-16.48) -- (42.07,-16.48);
+    \draw (42.07,-19.27) node [right] {$a$};
+    \end{tikzpicture}
+    \end{center}
+
     \item Epistemic sentence and updated model M'' after Bernard's announcement: \\
-    $ !_b (K_b \phi) $
+    $!_b (K_b \phi)$
+    \begin{center}
+    \begin{tikzpicture}[scale=0.2]
+    \tikzstyle{every node}+=[inner sep=0pt]
+    \draw [black] (31.01,-20.483) circle (3);
+    \draw (31.01,-20.48) node {$Juli16$};
+    \draw [black] (41.568,-12.68) circle (3);
+    \draw (41.57,-12.68) node {$Aug15$};
+    \draw [black] (41.568,-25.854) circle (3);
+    \draw (41.57,-25.85) node {$Aug17$};
+    \draw [black] (41.57,-15.7) -- (41.57,-22.85);
+    \fill [black] (41.57,-22.85) -- (42.07,-22.05) -- (41.07,-22.05);
+    \draw [black] (41.57,-22.85) -- (41.57,-15.68);
+    \fill [black] (41.57,-15.68) -- (41.07,-16.48) -- (42.07,-16.48);
+    \draw (42.07,-19.27) node [right] {$a$};
+    \end{tikzpicture}
+    \end{center}
+
     \item Epistemic sentence and updated model M''' after Albert's second announcement: \\
-    $ !_a (K_a \phi) $
+    $!_a (K_a \phi)$
+    \begin{center}
+    \begin{tikzpicture}[scale=0.2]
+    \tikzstyle{every node}+=[inner sep=0pt]
+    \draw [black] (31.01,-20.483) circle (3);
+    \draw (31.01,-20.48) node {$Juli16$};
+    \end{tikzpicture}
+    \end{center}
+
 \end{enumerate}
 
 \section{Exercise 2}
@@ -65,8 +206,8 @@ By the semantics of $K_a$, \eqref{eq:ex2_1} implies
 Using the semantics of knowledge \(K_{a}\) and common knowledge \(Ck\), show that the following is NOT valid on \textit{epistemic models with (only) 2 agents a and b:}
 
 \[(K_{a}K_{b}\phi\wedge K_{b}K_{a}\psi) \Rightarrow Ck(\phi\wedge\psi)\]
-
-* = The representation of the world \\
+\\
+$*$ = The representation of the world \\
 P = $ \phi $ \\
 Q = $ \psi $ \\
 \\
@@ -76,7 +217,7 @@ The epistemic model holds the beliefs that both a and b know P and Q, but they a
 \begin{tikzpicture}[scale=0.2]
 \tikzstyle{every node}+=[inner sep=0pt]
 \draw [black] (13.5,-10.1) circle (3);
-\draw (13.5,-10.1) node {$* P,\mbox{ }Q$};
+\draw (13.5,-10.1) node {$* P\mbox{ }Q$};
 \draw [black] (31,-10.1) circle (3);
 \draw (31,-10.1) node {$P$};
 \draw [black] (13.5,-26.2) circle (3);
@@ -104,3 +245,5 @@ The epistemic model holds the beliefs that both a and b know P and Q, but they a
 \end{center}
 
 \end{document}
+
+
