@@ -34,13 +34,32 @@
 \begin{enumerate}
 
     \item The sentence $\theta$ encoding all information: \\
-    $\theta$ = $K_a r_b \wedge \neg (K_a r_a \vee K_a w_a)
-            \wedge K_b r_a \wedge \neg (K_b r_b \vee K_b w_b)
-            \wedge K_q r_a \wedge K_q r_b$ \\
+
+    The Queen knows the following: \\
+    Alice knows Bob has a red hat. Alice knows Bob doesn't know it, and she knows the Queen knows this. Alice doesn't know her own hat. \\
+    Bob knows Alice has a red hat. Bob knows Alice doesn't know it, and he knows the Queen knows this. Bob doesn't know his own hat. \\
+
+    $\theta$ =
+        $K_q (
+        K_a (
+            r_b \wedge
+            \neg K_b (r_b \vee w_b) \wedge
+            K_q ((r_a \vee r_w) \wedge (r_b \vee r_w))
+        )
+        \wedge \neg K_a (r_a \vee w_a)
+        \wedge
+        K_b (
+            r_a \wedge
+            \neg K_a (r_a \vee w_a) \wedge
+            K_q ((r_a \vee r_w) \wedge (r_b \vee r_w))
+        )
+        \wedge \neg K_b (r_b \vee w_b)
+        )$
 
     \item A representation of the situation model \textbf{M}: \\
+
     $\mathcal{A}$ = \{a, b, q\} the agents Alice, Bob, and the Queen \\
-    $\Phi$ = $\{r_a, w_a, r_b, w_b\}$ the colors of the hats for a and b \\
+    $\Phi$ = $\{r_a, w_a, r_b, w_b\}$ written as WR for: a is white and b is red \\
 
     \begin{center}
     \begin{tikzpicture}[scale=0.2]
@@ -73,12 +92,52 @@
     \end{tikzpicture}
     \end{center}
 
-    This is an epistemic model: NO, the model is not reflexive. \\
+    This is an epistemic model: YES \\
 
-    \item Seperately a and b look in their mirrors and see their red hats, represented in the event model $\Sigma$ with four actions: \\
+    \pagebreak
 
-    This is an epistemic model: YES / NO \\
-    This is a doxasic model: YES / NO \\
+    \item Seperately a and b look in their mirrors and see their red hats, the queen sees everything, represented in the event model $\Sigma$ with four actions: \\
+
+    \begin{center}
+    \begin{tikzpicture}[scale=0.2]
+    \tikzstyle{every node}+=[inner sep=0pt]
+    \draw [black] (54,-42.2) circle (3);
+    \draw (54,-42.2) node {$RR$};
+    \draw [black] (37.3,-28) circle (3);
+    \draw (37.3,-28) node {$RR$};
+    \draw [black] (37.3,-42.2) circle (3);
+    \draw (37.3,-42.2) node {$True$};
+    \draw [black] (54,-28) circle (3);
+    \draw (54,-28) node {$*RR$};
+    \draw [black] (56.805,-43.229) arc (97.58097:-190.41903:2.25);
+    \draw (59.62,-47.57) node [below] {$a$};
+    \fill [black] (54.89,-45.05) -- (54.5,-45.91) -- (55.49,-45.78);
+    \draw [black] (34.491,-26.979) arc (277.76012:-10.23988:2.25);
+    \draw (31.61,-22.64) node [above] {$b$};
+    \fill [black] (36.4,-25.15) -- (36.79,-24.29) -- (35.8,-24.42);
+    \draw [black] (51,-42.2) -- (40.3,-42.2);
+    \fill [black] (40.3,-42.2) -- (41.1,-42.7) -- (41.1,-41.7);
+    \draw (45.65,-42.7) node [below] {$bq$};
+    \draw [black] (37.3,-31) -- (37.3,-39.2);
+    \fill [black] (37.3,-39.2) -- (37.8,-38.4) -- (36.8,-38.4);
+    \draw (36.8,-35.1) node [left] {$aq$};
+    \draw [black] (51,-28) -- (40.3,-28);
+    \fill [black] (40.3,-28) -- (41.1,-28.5) -- (41.1,-27.5);
+    \draw (45.65,-27.5) node [above] {$b$};
+    \draw [black] (54,-31) -- (54,-39.2);
+    \fill [black] (54,-39.2) -- (54.5,-38.4) -- (53.5,-38.4);
+    \draw (53.5,-35.1) node [left] {$a$};
+    \draw [black] (54.889,-25.147) arc (190.43418:-97.56582:2.25);
+    \draw (59.67,-22.63) node [above] {$q$};
+    \fill [black] (56.81,-26.97) -- (57.68,-27.32) -- (57.5,-26.33);
+    \draw [black] (36.935,-45.166) arc (20.7166:-267.2834:2.25);
+    \draw (31.65,-48.34) node [below] {$abq$};
+    \fill [black] (34.72,-43.71) -- (33.8,-43.53) -- (34.15,-44.47);
+    \end{tikzpicture}
+    \end{center}
+
+    This is an epistemic model: NO \\
+    This is a doxasic model: YES \\
 
     \item The update product of the two models \textbf{M} $\bigotimes$ $\Sigma$ : \\
 
