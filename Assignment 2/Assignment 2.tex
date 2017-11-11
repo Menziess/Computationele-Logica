@@ -7,16 +7,13 @@
 
 \title{Computationele logica}
 \author{
-    \small Kamans, Jim\\
+    Kamans, Jim\\
     \texttt{10302905}
     \and
-    \small Hendrikse, Mila\\
-    \texttt{00000000}
-    \and
-    \small Roosingh, Sander\\
+    Roosingh, Sander\\
     \texttt{11983957}
     \and
-    \small Schenk, Stefan\\
+    Schenk, Stefan\\
     \texttt{11881798}
 }
 \date{November 2017}
@@ -81,7 +78,7 @@
     \draw [black] (25.7,-13.7) -- (35.4,-13.7);
     \fill [black] (35.4,-13.7) -- (34.6,-13.2) -- (34.6,-14.2);
     \draw [black] (37.077,-11.02) arc (234:-54:2.25);
-    \draw (38.4,-6.45) node [above] {$q$};
+    \draw (38.4,-6.45) node [above] {$abq$};
     \fill [black] (39.72,-11.02) -- (40.6,-10.67) -- (39.79,-10.08);
     \draw [black] (52.677,-11.02) arc (234:-54:2.25);
     \draw (54,-6.45) node [above] {$abq$};
@@ -141,8 +138,73 @@
 
     \item The update product of the two models \textbf{M} $\bigotimes$ $\Sigma$ : \\
 
-    This is an epistemic model: YES / NO \\
-    This is a doxasic model: YES / NO \\
+    \begin{center}
+    \begin{tikzpicture}[scale=0.2]
+    \tikzstyle{every node}+=[inner sep=0pt]
+    \draw [black] (8.5,-48.9) circle (3);
+    \draw (8.5,-48.9) node {$WR$};
+    \draw [black] (23.4,-48.9) circle (3);
+    \draw (23.4,-48.9) node {$RR$};
+    \draw [black] (38.1,-48.9) circle (3);
+    \draw (38.1,-48.9) node {$RW$};
+    \draw [black] (8.5,-32.7) circle (3);
+    \draw (8.5,-32.7) node {$RR$};
+    \draw [black] (23.4,-32.7) circle (3);
+    \draw (23.4,-32.7) node {$*RR$};
+    \draw [black] (38.1,-32.7) circle (3);
+    \draw (38.1,-32.7) node {$RR$};
+    \draw [black] (8.476,-51.888) arc (27.27123:-260.72877:2.25);
+    \draw (3.54,-55.44) node [below] {$abq$};
+    \fill [black] (6.11,-50.7) -- (5.17,-50.62) -- (5.63,-51.51);
+    \draw [black] (23.394,-51.888) arc (27.62144:-260.37856:2.25);
+    \draw (18.48,-55.46) node [below] {$abq$};
+    \fill [black] (21.02,-50.71) -- (20.08,-50.64) -- (20.55,-51.53);
+    \draw [black] (37.977,-51.886) arc (25.36938:-262.63062:2.25);
+    \draw (32.93,-55.33) node [below] {$abq$};
+    \fill [black] (35.66,-50.62) -- (34.72,-50.51) -- (35.15,-51.41);
+    \draw [black] (26.4,-48.9) -- (35.1,-48.9);
+    \fill [black] (35.1,-48.9) -- (34.3,-48.4) -- (34.3,-49.4);
+    \draw (30.75,-48.4) node [above] {$b$};
+    \draw [black] (20.4,-48.9) -- (11.5,-48.9);
+    \fill [black] (11.5,-48.9) -- (12.3,-49.4) -- (12.3,-48.4);
+    \draw (15.95,-48.4) node [above] {$a$};
+    \draw [black] (11.5,-48.9) -- (20.4,-48.9);
+    \fill [black] (20.4,-48.9) -- (19.6,-48.4) -- (19.6,-49.4);
+    \draw [black] (35.1,-48.9) -- (26.4,-48.9);
+    \fill [black] (26.4,-48.9) -- (27.2,-49.4) -- (27.2,-48.4);
+    \draw [black] (8.5,-35.7) -- (8.5,-45.9);
+    \fill [black] (8.5,-45.9) -- (9,-45.1) -- (8,-45.1);
+    \draw (8,-40.8) node [left] {$a$};
+    \draw [black] (5.671,-31.737) arc (278.9367:-9.0633:2.25);
+    \draw (2.71,-27.44) node [above] {$b$};
+    \fill [black] (7.54,-29.87) -- (7.91,-29) -- (6.93,-29.16);
+    \draw [black] (20.4,-32.7) -- (11.5,-32.7);
+    \fill [black] (11.5,-32.7) -- (12.3,-33.2) -- (12.3,-32.2);
+    \draw (15.95,-32.2) node [above] {$b$};
+    \draw [black] (20.879,-31.095) arc (265.25323:-22.74677:2.25);
+    \draw (18.9,-26.43) node [above] {$q$};
+    \fill [black] (23.14,-29.72) -- (23.7,-28.97) -- (22.71,-28.88);
+    \draw [black] (26.4,-32.7) -- (35.1,-32.7);
+    \fill [black] (35.1,-32.7) -- (34.3,-32.2) -- (34.3,-33.2);
+    \draw (30.75,-32.2) node [above] {$a$};
+    \draw [black] (38.325,-29.72) arc (203.42077:-84.57923:2.25);
+    \draw (42.48,-26.39) node [above] {$a$};
+    \fill [black] (40.6,-31.07) -- (41.53,-31.21) -- (41.14,-30.29);
+    \draw [black] (38.1,-35.7) -- (38.1,-45.9);
+    \fill [black] (38.1,-45.9) -- (38.6,-45.1) -- (37.6,-45.1);
+    \draw (37.6,-40.8) node [left] {$b$};
+    \draw [black] (10.53,-34.91) -- (21.37,-46.69);
+    \fill [black] (21.37,-46.69) -- (21.2,-45.76) -- (20.46,-46.44);
+    \draw (16.48,-39.34) node [right] {$aq$};
+    \draw [black] (36.08,-34.92) -- (25.42,-46.68);
+    \fill [black] (25.42,-46.68) -- (26.32,-46.42) -- (25.58,-45.75);
+    \draw (30.21,-39.34) node [left] {$bq$};
+    \end{tikzpicture}
+    \end{center}
+
+
+    This is an epistemic model: NO \\
+    This is a doxasic model: YES \\
 
 \end{enumerate}
 
