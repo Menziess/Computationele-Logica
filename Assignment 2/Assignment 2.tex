@@ -33,8 +33,10 @@
     \item The sentence $\theta$ encoding all information: \\
 
     The Queen knows the following: \\
-    Alice knows Bob has a red hat. Alice knows Bob doesn't know it, and she knows the Queen knows this. Alice doesn't know her own hat. \\
-    Bob knows Alice has a red hat. Bob knows Alice doesn't know it, and he knows the Queen knows this. Bob doesn't know his own hat. \\
+    Alice knows Bob has a red hat. Alice knows Bob doesn't know it, and she
+    knows the Queen knows this. Alice doesn't know her own hat. \\
+    Bob knows Alice has a red hat. Bob knows Alice doesn't know it, and he
+    knows the Queen knows this. Bob doesn't know his own hat. \\
 
     $\theta$ =
         $K_q (
@@ -56,7 +58,8 @@
     \item A representation of the situation model \textbf{M}: \\
 
     $\mathcal{A}$ = \{a, b, q\} the agents Alice, Bob, and the Queen \\
-    $\Phi$ = $\{r_a, w_a, r_b, w_b\}$ written as WR for: a is white and b is red \\
+    $\Phi$ = $\{r_a, w_a, r_b, w_b\}$ written as WR for:
+    a is white and b is red \\
 
     \begin{center}
     \begin{tikzpicture}[scale=0.2]
@@ -93,7 +96,9 @@
 
     \pagebreak
 
-    \item Seperately a and b look in their mirrors and see their red hats, the queen sees everything, represented in the event model $\Sigma$ with four actions: \\
+    \item Seperately a and b look in their mirrors and see their red hats, the
+    queen sees everything, represented in the event model $\Sigma$ with four
+    actions: \\
 
     \begin{center}
     \begin{tikzpicture}[scale=0.2]
@@ -136,7 +141,8 @@
     This is an epistemic model: NO \\
     This is a doxasic model: YES \\
 
-    \item The update product of the two models \textbf{M} $\bigotimes$ $\Sigma$ : \\
+    \item The update product of the two models \textbf{M}
+    $\bigotimes$ $\Sigma$ : \\
 
     \begin{center}
     \begin{tikzpicture}[scale=0.2]
@@ -202,7 +208,6 @@
     \end{tikzpicture}
     \end{center}
 
-
     This is an epistemic model: NO \\
     This is a doxasic model: YES \\
 
@@ -216,11 +221,224 @@
 
 \begin{enumerate}
 
-    \item There are ? possible worlds.
-    \item
-    \item
-    \item
-    \item
+    \item Representation of the bits world as an epistemic model \textbf{M}: \\
+
+    \begin{center}
+    \begin{tikzpicture}[scale=0.2]
+    \tikzstyle{every node}+=[inner sep=0pt]
+    \draw [black] (40.3,-10.1) circle (3);
+    \draw (40.3,-10.1) node {$000$};
+    \draw [black] (27.6,-32.8) circle (3);
+    \draw (27.6,-32.8) node {$011$};
+    \draw [black] (52.8,-32.8) circle (3);
+    \draw (52.8,-32.8) node {$110$};
+    \draw [black] (40.3,-25.5) circle (3);
+    \draw (40.3,-25.5) node {$*101$};
+    \draw [black] (29.06,-30.18) -- (38.84,-12.72);
+    \fill [black] (38.84,-12.72) -- (38.01,-13.17) -- (38.88,-13.66);
+    \draw [black] (40.3,-22.5) -- (40.3,-13.1);
+    \fill [black] (40.3,-13.1) -- (39.8,-13.9) -- (40.8,-13.9);
+    \draw [black] (40.3,-13.1) -- (40.3,-22.5);
+    \fill [black] (40.3,-22.5) -- (40.8,-21.7) -- (39.8,-21.7);
+    \draw (39.8,-17.8) node [left] {$ac$};
+    \draw [black] (30.2,-31.3) -- (37.7,-27);
+    \fill [black] (37.7,-27) -- (36.76,-26.96) -- (37.25,-27.83);
+    \draw [black] (37.7,-27) -- (30.2,-31.3);
+    \fill [black] (30.2,-31.3) -- (31.14,-31.34) -- (30.65,-30.47);
+    \draw (32.51,-28.65) node [above] {$ab$};
+    \draw [black] (41.75,-12.73) -- (51.35,-30.17);
+    \fill [black] (51.35,-30.17) -- (51.41,-29.23) -- (50.53,-29.71);
+    \draw [black] (51.35,-30.17) -- (41.75,-12.73);
+    \fill [black] (41.75,-12.73) -- (41.69,-13.67) -- (42.57,-13.19);
+    \draw (47.22,-20.26) node [right] {$ab$};
+    \draw [black] (42.89,-27.01) -- (50.21,-31.29);
+    \fill [black] (50.21,-31.29) -- (49.77,-30.45) -- (49.27,-31.32);
+    \draw [black] (50.21,-31.29) -- (42.89,-27.01);
+    \fill [black] (42.89,-27.01) -- (43.33,-27.85) -- (43.83,-26.98);
+    \draw (47.99,-28.65) node [above] {$bc$};
+    \draw [black] (30.6,-32.8) -- (49.8,-32.8);
+    \fill [black] (49.8,-32.8) -- (49,-32.3) -- (49,-33.3);
+    \draw [black] (49.8,-32.8) -- (30.6,-32.8);
+    \fill [black] (30.6,-32.8) -- (31.4,-33.3) -- (31.4,-32.3);
+    \draw (40.2,-32.3) node [above] {$ac$};
+    \draw [black] (38.84,-12.72) -- (29.06,-30.18);
+    \fill [black] (29.06,-30.18) -- (29.89,-29.73) -- (29.02,-29.24);
+    \draw (33.29,-20.24) node [left] {$bc$};
+    \draw [black] (37.62,-11.423) arc (324:36:2.25);
+    \draw (33.05,-10.1) node [left] {$abc$};
+    \fill [black] (37.62,-8.78) -- (37.27,-7.9) -- (36.68,-8.71);
+    \draw [black] (25.133,-31.114) arc (263.38389:-24.61611:2.25);
+    \draw (22.41,-26.42) node [above] {$abc$};
+    \fill [black] (27.44,-29.82) -- (28.03,-29.08) -- (27.03,-28.96);
+    \draw [black] (52.432,-29.834) arc (214.79929:-73.20071:2.25);
+    \draw (56.74,-25.87) node [above] {$abc$};
+    \fill [black] (54.93,-30.7) -- (55.87,-30.66) -- (55.3,-29.84);
+    \end{tikzpicture}
+    \end{center}
+
+    \item Representation of event model $\Sigma$:
+
+    \begin{center}
+    \begin{tikzpicture}[scale=0.2]
+    \tikzstyle{every node}+=[inner sep=0pt]
+    \draw [black] (9.4,-37.3) circle (3);
+    \draw (9.4,-37.3) node {$101$};
+    \draw [black] (18.9,-37.3) circle (3);
+    \draw (18.9,-37.3) node {$*101$};
+    \draw [black] (28.5,-37.3) circle (3);
+    \draw (28.5,-37.3) node {$110$};
+    \draw [black] (18.9,-49) circle (3);
+    \draw (18.9,-49) node {$True$};
+    \draw [black] (8.077,-34.62) arc (234:-54:2.25);
+    \draw (9.4,-30.05) node [above] {$b$};
+    \fill [black] (10.72,-34.62) -- (11.6,-34.27) -- (10.79,-33.68);
+    \draw [black] (17.577,-34.62) arc (234:-54:2.25);
+    \draw (18.9,-30.05) node [above] {$ab$};
+    \fill [black] (20.22,-34.62) -- (21.1,-34.27) -- (20.29,-33.68);
+    \draw [black] (27.177,-34.62) arc (234:-54:2.25);
+    \draw (28.5,-30.05) node [above] {$ab$};
+    \fill [black] (29.82,-34.62) -- (30.7,-34.27) -- (29.89,-33.68);
+    \draw [black] (25.5,-37.3) -- (21.9,-37.3);
+    \fill [black] (21.9,-37.3) -- (22.7,-37.8) -- (22.7,-36.8);
+    \draw (23.7,-36.8) node [above] {$a$};
+    \draw [black] (11.29,-39.63) -- (17.01,-46.67);
+    \fill [black] (17.01,-46.67) -- (16.89,-45.73) -- (16.12,-46.37);
+    \draw (13.59,-44.58) node [left] {$ac$};
+    \draw [black] (20.223,-51.68) arc (54:-234:2.25);
+    \draw (18.9,-56.25) node [below] {$abc$};
+    \fill [black] (17.58,-51.68) -- (16.7,-52.03) -- (17.51,-52.62);
+    \draw [black] (26.6,-39.62) -- (20.8,-46.68);
+    \fill [black] (20.8,-46.68) -- (21.7,-46.38) -- (20.92,-45.75);
+    \draw (24.26,-44.58) node [right] {$c$};
+    \draw [black] (18.9,-40.3) -- (18.9,-46);
+    \fill [black] (18.9,-46) -- (19.4,-45.2) -- (18.4,-45.2);
+    \draw (18.4,-43.15) node [left] {$c$};
+    \draw [black] (21.9,-37.3) -- (25.5,-37.3);
+    \fill [black] (25.5,-37.3) -- (24.7,-36.8) -- (24.7,-37.8);
+    \end{tikzpicture}
+    \end{center}
+
+    \pagebreak
+    \item Representation of model \textbf{M'}:
+
+    \begin{center}
+    \begin{tikzpicture}[scale=0.2]
+    \tikzstyle{every node}+=[inner sep=0pt]
+    \draw [black] (32.1,-3.4) circle (3);
+    \draw (32.1,-3.4) node {$000$};
+    \draw [black] (8.4,-49.2) circle (3);
+    \draw (8.4,-49.2) node {$011$};
+    \draw [black] (47.6,-49.2) circle (3);
+    \draw (47.6,-49.2) node {$110$};
+    \draw [black] (32.1,-25.2) circle (3);
+    \draw (32.1,-25.2) node {$101$};
+    \draw [black] (60.9,-25.2) circle (3);
+    \draw (60.9,-25.2) node {$*101$};
+    \draw [black] (60.9,-38.9) circle (3);
+    \draw (60.9,-38.9) node {$110$};
+    \draw [black] (8.4,-25.2) circle (3);
+    \draw (8.4,-25.2) node {$101$};
+    \draw [black] (9.78,-46.54) -- (30.72,-6.06);
+    \fill [black] (30.72,-6.06) -- (29.91,-6.55) -- (30.8,-7);
+    \draw [black] (32.1,-22.2) -- (32.1,-6.4);
+    \fill [black] (32.1,-6.4) -- (31.6,-7.2) -- (32.6,-7.2);
+    \draw [black] (32.1,-6.4) -- (32.1,-22.2);
+    \fill [black] (32.1,-22.2) -- (32.6,-21.4) -- (31.6,-21.4);
+    \draw (31.6,-14.3) node [left] {$ac$};
+    \draw [black] (10.51,-47.07) -- (29.99,-27.33);
+    \fill [black] (29.99,-27.33) -- (29.07,-27.55) -- (29.79,-28.26);
+    \draw [black] (29.99,-27.33) -- (10.51,-47.07);
+    \fill [black] (10.51,-47.07) -- (11.43,-46.85) -- (10.71,-46.14);
+    \draw (19.73,-35.73) node [left] {$ab$};
+    \draw [black] (33.06,-6.24) -- (46.64,-46.36);
+    \fill [black] (46.64,-46.36) -- (46.86,-45.44) -- (45.91,-45.76);
+    \draw [black] (46.64,-46.36) -- (33.06,-6.24);
+    \fill [black] (33.06,-6.24) -- (32.84,-7.16) -- (33.79,-6.84);
+    \draw (40.61,-25.58) node [right] {$ab$};
+    \draw [black] (33.73,-27.72) -- (45.97,-46.68);
+    \fill [black] (45.97,-46.68) -- (45.96,-45.74) -- (45.12,-46.28);
+    \draw [black] (45.97,-46.68) -- (33.73,-27.72);
+    \fill [black] (33.73,-27.72) -- (33.74,-28.66) -- (34.58,-28.12);
+    \draw (40.47,-35.89) node [right] {$bc$};
+    \draw [black] (11.4,-49.2) -- (44.6,-49.2);
+    \fill [black] (44.6,-49.2) -- (43.8,-48.7) -- (43.8,-49.7);
+    \draw [black] (44.6,-49.2) -- (11.4,-49.2);
+    \fill [black] (11.4,-49.2) -- (12.2,-49.7) -- (12.2,-48.7);
+    \draw (28,-48.7) node [above] {$ac$};
+    \draw [black] (30.72,-6.06) -- (9.78,-46.54);
+    \fill [black] (9.78,-46.54) -- (10.59,-46.05) -- (9.7,-45.6);
+    \draw (19.56,-25.16) node [left] {$bc$};
+    \draw [black] (29.42,-4.723) arc (324:36:2.25);
+    \draw (24.85,-3.4) node [left] {$abc$};
+    \fill [black] (29.42,-2.08) -- (29.07,-1.2) -- (28.48,-2.01);
+    \draw [black] (11.174,-50.311) arc (95.90564:-192.09436:2.25);
+    \draw (14.81,-54.71) node [below] {$abc$};
+    \fill [black] (9.21,-52.08) -- (8.79,-52.92) -- (9.79,-52.82);
+    \draw [black] (50.435,-50.146) arc (99.2849:-188.7151:2.25);
+    \draw (52.92,-55.42) node [right] {$abc$};
+    \fill [black] (48.57,-52.03) -- (48.21,-52.9) -- (49.2,-52.73);
+    \draw [black] (60.835,-22.212) arc (208.98311:-79.01689:2.25);
+    \draw (65.18,-18.57) node [above] {$ab$};
+    \fill [black] (63.23,-23.33) -- (64.17,-23.38) -- (63.69,-22.51);
+    \draw [black] (63.844,-38.386) arc (127.63752:-160.36248:2.25);
+    \draw (68.14,-41.39) node [right] {$ab$};
+    \fill [black] (63.1,-40.92) -- (63.19,-41.86) -- (63.98,-41.25);
+    \draw [black] (7.077,-22.52) arc (234:-54:2.25);
+    \draw (8.4,-17.95) node [above] {$b$};
+    \fill [black] (9.72,-22.52) -- (10.6,-22.17) -- (9.79,-21.58);
+    \draw [black] (8.4,-28.2) -- (8.4,-46.2);
+    \fill [black] (8.4,-46.2) -- (8.9,-45.4) -- (7.9,-45.4);
+    \draw (7.9,-37.2) node [left] {$ac$};
+    \draw [black] (10.61,-23.17) -- (29.89,-5.43);
+    \fill [black] (29.89,-5.43) -- (28.96,-5.6) -- (29.64,-6.34);
+    \draw (21.65,-14.79) node [below] {$ac$};
+    \draw [black] (11.4,-25.2) -- (29.1,-25.2);
+    \fill [black] (29.1,-25.2) -- (28.3,-24.7) -- (28.3,-25.7);
+    \draw (20.25,-25.7) node [below] {$ac$};
+    \draw [black] (10.96,-26.77) -- (45.04,-47.63);
+    \fill [black] (45.04,-47.63) -- (44.62,-46.79) -- (44.1,-47.64);
+    \draw (26.61,-37.7) node [below] {$ac$};
+    \draw [black] (60.9,-35.9) -- (60.9,-28.2);
+    \fill [black] (60.9,-28.2) -- (60.4,-29) -- (61.4,-29);
+    \draw (61.4,-32.05) node [right] {$a$};
+    \draw [black] (60.9,-28.2) -- (60.9,-35.9);
+    \fill [black] (60.9,-35.9) -- (61.4,-35.1) -- (60.4,-35.1);
+    \draw [black] (58.53,-40.74) -- (49.97,-47.36);
+    \fill [black] (49.97,-47.36) -- (50.91,-47.27) -- (50.3,-46.48);
+    \draw (53.3,-43.55) node [above] {$c$};
+    \draw [black] (58.19,-37.61) -- (34.81,-26.49);
+    \fill [black] (34.81,-26.49) -- (35.32,-27.28) -- (35.75,-26.38);
+    \draw (47.43,-31.54) node [above] {$c$};
+    \draw [black] (57.96,-39.48) -- (11.34,-48.62);
+    \fill [black] (11.34,-48.62) -- (12.23,-48.96) -- (12.03,-47.98);
+    \draw (34.13,-43.47) node [above] {$c$};
+    \draw [black] (58.17,-26.45) -- (11.13,-47.95);
+    \fill [black] (11.13,-47.95) -- (12.06,-48.07) -- (11.65,-47.17);
+    \draw (33.72,-36.69) node [above] {$c$};
+    \draw [black] (59.01,-36.57) -- (33.99,-5.73);
+    \fill [black] (33.99,-5.73) -- (34.11,-6.67) -- (34.88,-6.04);
+    \draw (47.06,-19.72) node [right] {$c$};
+    \draw [black] (58.51,-23.39) -- (34.49,-5.21);
+    \fill [black] (34.49,-5.21) -- (34.83,-6.09) -- (35.43,-5.29);
+    \draw (47.45,-13.8) node [above] {$c$};
+    \draw [black] (57.9,-25.2) -- (35.1,-25.2);
+    \fill [black] (35.1,-25.2) -- (35.9,-25.7) -- (35.9,-24.7);
+    \draw (46.5,-24.7) node [above] {$c$};
+    \draw [black] (59.45,-27.82) -- (49.05,-46.58);
+    \fill [black] (49.05,-46.58) -- (49.88,-46.12) -- (49,-45.63);
+    \draw (53.58,-36) node [left] {$c$};
+    \draw [black] (33.423,-27.88) arc (54:-234:2.25);
+    \draw (32.1,-32.45) node [below] {$abc$};
+    \fill [black] (30.78,-27.88) -- (29.9,-28.23) -- (30.71,-28.82);
+    \end{tikzpicture}
+    \end{center}
+
+
+
+    \item Representation of event model \textbf{$\Sigma$'}:
+
+    \item The update product of the two models \textbf{M''} = \textbf{M}
+    $\bigotimes$ \textbf{$\Sigma$'} : \\
 
 \end{enumerate}
 
@@ -228,7 +446,7 @@
 %%%%%%%%%%%%%%%%
 %% Exercise 3 %%
 %%%%%%%%%%%%%%%%
-\section{Exercise 2}
+\section{Exercise 3}
 
 \begin{enumerate}
 
