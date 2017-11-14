@@ -450,8 +450,89 @@
 
 \begin{enumerate}
 
-    \item
-    \item
+    \item \textit{How many possible worlds} are there (that are consistent with the story above)?\\
+    \begin{center}
+    	\begin{tikzpicture}[scale=0.2]
+    	\tikzstyle{every node}+=[inner sep=0pt]
+    	\draw [black] (44,-12.6) circle (3);
+    	\draw (44,-12.6) node {$n_{a}\mbox{ }=\mbox{ }n_{b}\mbox{ }+\mbox{ }1$};
+    	\draw [black] (44,-23.6) circle (3);
+    	\draw (44,-23.6) node {$n_{b}\mbox{ }=\mbox{ }n_{a}\mbox{ }+\mbox{ }1$};
+    	\draw [black] (44,-15.6) -- (44,-20.6);
+    	\fill [black] (44,-20.6) -- (44.5,-19.8) -- (43.5,-19.8);
+    	\draw (43.5,-18.1) node [left] {$a,\mbox{ }b$};
+    	\draw [black] (44,-20.6) -- (44,-15.6);
+    	\fill [black] (44,-15.6) -- (43.5,-16.4) -- (44.5,-16.4);
+    	\end{tikzpicture}
+    \end{center}
+    
+    \item Represent (draw) the above situation as an epistemic model M1, with two agents (a for Alice, b for Bob),  using pairs of numbers (na,nb) as “names” for the possible worlds. Draw the epistemic accessibility  relations for each agent. but  do
+    not worry about the valuation (yet), since no atomic sentences are given yet.\\
+    \begin{center}
+    	\begin{tikzpicture}[scale=0.2]
+    	\tikzstyle{every node}+=[inner sep=0pt]
+    	\draw [black] (25,-11.7) circle (3);
+    	\draw (25,-11.7) node {$0,\mbox{ }1$};
+    	\draw [black] (38.7,-11.7) circle (3);
+    	\draw (38.7,-11.7) node {$1,\mbox{ }0$};
+    	\draw [black] (38.7,-22.3) circle (3);
+    	\draw (38.7,-22.3) node {$1,\mbox{ }2$};
+    	\draw [black] (25,-22.3) circle (3);
+    	\draw (25,-22.3) node {$2,\mbox{ }1$};
+    	\draw [black] (25,-33.2) circle (3);
+    	\draw (25,-33.2) node {$2,\mbox{ }3$};
+    	\draw [black] (38.7,-33.2) circle (3);
+    	\draw (38.7,-33.2) node {$3,\mbox{ }2$};
+    	\draw [black] (25,-44.6) circle (3);
+    	\draw (25,-44.6) node {$4,\mbox{ }3$};
+    	\draw [black] (38.7,-44.6) circle (3);
+    	\draw (38.7,-44.6) node {$3,\mbox{ }4$};
+    	\draw [black] (25,-56) circle (3);
+    	\draw (25,-56) node {$....$};
+    	\draw [black] (38.7,-56) circle (3);
+    	\draw (38.7,-56) node {$....$};
+    	\draw [black] (25,-14.7) -- (25,-19.3);
+    	\fill [black] (25,-19.3) -- (25.5,-18.5) -- (24.5,-18.5);
+    	\draw (24.5,-17) node [left] {$a$};
+    	\draw [black] (38.7,-14.7) -- (38.7,-19.3);
+    	\fill [black] (38.7,-19.3) -- (39.2,-18.5) -- (38.2,-18.5);
+    	\draw (38.2,-17) node [left] {$b$};
+    	\draw [black] (38.7,-25.3) -- (38.7,-30.2);
+    	\fill [black] (38.7,-30.2) -- (39.2,-29.4) -- (38.2,-29.4);
+    	\draw (38.2,-27.75) node [left] {$a$};
+    	\draw [black] (25,-25.3) -- (25,-30.2);
+    	\fill [black] (25,-30.2) -- (25.5,-29.4) -- (24.5,-29.4);
+    	\draw (24.5,-27.75) node [left] {$b$};
+    	\draw [black] (38.7,-36.2) -- (38.7,-41.6);
+    	\fill [black] (38.7,-41.6) -- (39.2,-40.8) -- (38.2,-40.8);
+    	\draw (38.2,-38.9) node [left] {$b$};
+    	\draw [black] (38.7,-47.6) -- (38.7,-53);
+    	\fill [black] (38.7,-53) -- (39.2,-52.2) -- (38.2,-52.2);
+    	\draw (38.2,-50.3) node [left] {$a$};
+    	\draw [black] (25,-47.6) -- (25,-53);
+    	\fill [black] (25,-53) -- (25.5,-52.2) -- (24.5,-52.2);
+    	\draw (24.5,-50.3) node [left] {$b$};
+    	\draw [black] (25,-36.2) -- (25,-41.6);
+    	\fill [black] (25,-41.6) -- (25.5,-40.8) -- (24.5,-40.8);
+    	\draw (24.5,-38.9) node [left] {$a$};
+    	\draw [black] (25,-19.3) -- (25,-14.7);
+    	\fill [black] (25,-14.7) -- (24.5,-15.5) -- (25.5,-15.5);
+    	\draw [black] (38.7,-19.3) -- (38.7,-14.7);
+    	\fill [black] (38.7,-14.7) -- (38.2,-15.5) -- (39.2,-15.5);
+    	\draw [black] (38.7,-30.2) -- (38.7,-25.3);
+    	\fill [black] (38.7,-25.3) -- (38.2,-26.1) -- (39.2,-26.1);
+    	\draw [black] (25,-30.2) -- (25,-25.3);
+    	\fill [black] (25,-25.3) -- (24.5,-26.1) -- (25.5,-26.1);
+    	\draw [black] (25,-41.6) -- (25,-36.2);
+    	\fill [black] (25,-36.2) -- (24.5,-37) -- (25.5,-37);
+    	\draw [black] (38.7,-41.6) -- (38.7,-36.2);
+    	\fill [black] (38.7,-36.2) -- (38.2,-37) -- (39.2,-37);
+    	\draw [black] (38.7,-53) -- (38.7,-47.6);
+    	\fill [black] (38.7,-47.6) -- (38.2,-48.4) -- (39.2,-48.4);
+    	\draw [black] (25,-53) -- (25,-47.6);
+    	\fill [black] (25,-47.6) -- (24.5,-48.4) -- (25.5,-48.4);
+    	\end{tikzpicture}
+    \end{center}
     \item
     \item
     \item
