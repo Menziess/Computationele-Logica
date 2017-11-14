@@ -22,7 +22,7 @@
 
 \maketitle
 
-\section{Exercise 1}
+\section*{Exercise 1}
 
 $\phi$ = the date of Cheryl's birthday, a = Albert, b = Bernard, c = Cheryl
 
@@ -108,13 +108,13 @@ With arrows we are representing the children’s knowledge relations, so we’ll
     \end{center}
 
     \item Epistemic sentence encoding Albert's first announcement:
-    
+
     $!(\neg K_a \phi \wedge K_a \neg K_b \phi)$
-    
+
     Albert announces that he doesn't know the date of Cheryl's birthday, and that he knows that Bernard doesn't know the date of Cheryl's birthday either.
 
     \item Updated model M' after Albert's first announcement:
-    
+
     If Bernard either knew that the date was the 19th of May or the 18th of June, he would've instantly known the date of Cheryl's birthday because no other dates exists with these day numbers. Therefore, May and June are no longer an option after the public announcement.
 
     \begin{center}
@@ -154,11 +154,11 @@ With arrows we are representing the children’s knowledge relations, so we’ll
     \end{center}
 
     \item Epistemic sentence and updated model M'' after Bernard's announcement:
-    
+
     $!(K_b \phi)$
-    
+
     Bernard announces that he knows the date of Cheryl's birthday now.
-    
+
     \begin{center}
     \begin{tikzpicture}[scale=0.2]
     \tikzstyle{every node}+=[inner sep=0pt]
@@ -177,11 +177,11 @@ With arrows we are representing the children’s knowledge relations, so we’ll
     \end{center}
 
     \item Epistemic sentence and updated model M''' after Albert's second announcement:
-    
+
     $!(K_a \phi)$
-    
+
     Albert announces that he too knows.
-    
+
     \begin{center}
     \begin{tikzpicture}[scale=0.2]
     \tikzstyle{every node}+=[inner sep=0pt]
@@ -194,7 +194,7 @@ With arrows we are representing the children’s knowledge relations, so we’ll
 
 \end{enumerate}
 
-\section{Exercise 2}
+\section*{Exercise 2}
 Prove formally that, for every sentence \(\varphi\), the sentence
 \[\neg K_{a}\varphi \Rightarrow K_{a}\neg K_{a}\varphi\]
 (expressing ``Negative Introspection of Knowledge'') is \textit{valid} on (the family of all) \textbf{epistemic} models.
@@ -213,7 +213,7 @@ We need to prove that
 \end{equation}
 Let $W'$ be all worlds reachable from $w$ by actor $a$, i.e. $W' = \{w' \in W| w R_a w'\}$. Then from \eqref{eq:ex2_1} it follows that $\exists v \in W'| v \models \varphi$ and $\exists s \in W'| s \not \models \varphi$. Because of symmetry, $v R_a w$ and because of transitivity, $v R_a s$. Because actor $a$ cannot distinguish between $v$ and $s$, it holds that $\neg K_a \varphi$ is true in $v$ and $s$. Because $W'$ only exists of worlds like $v$ and $s$, $\neg K_a \varphi$ is true in all worlds of $W'$. From the semantics of $K_a$, it follows that for each $w' \in W'$, $w' \models_M K_a \neg K_a \varphi$. Because $w \in W'$ ($w R_a w$ (reflexivity)), $w \models_M K_a \neg K_a \varphi$ and \eqref{eq:ex2_?} is proven.
 
-\section{Exercise 3}
+\section*{Exercise 3}
 Using the semantics of knowledge \(K_{a}\) and common knowledge \(Ck\), show that the following is NOT valid on \textit{epistemic models with (only) 2 agents a and b:}
 
 \[(K_{a}K_{b}\phi\wedge K_{b}K_{a}\psi) \Rightarrow Ck(\phi\wedge\psi)\]
