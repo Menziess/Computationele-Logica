@@ -329,7 +329,7 @@
     \draw [black] (65.3,-6.7) circle (3);
     \draw (65.3,-6.7) node {$110$};
     \draw [black] (12.8,-6.7) circle (3);
-    \draw (12.8,-6.7) node {$101$};
+    \draw (12.8,-6.7) node {$*101$};
     \draw [black] (62.54,-47.33) -- (35.16,-35.77);
     \fill [black] (35.16,-35.77) -- (35.71,-36.54) -- (36.1,-35.62);
     \draw (49.82,-41.04) node [above] {$b$};
@@ -429,6 +429,54 @@
     \end{center}
 
     \item Representation of event model \textbf{$\Sigma$'}:
+
+    \begin{center}
+    \begin{tikzpicture}[scale=0.2]
+    \tikzstyle{every node}+=[inner sep=0pt]
+    \draw [black] (18.3,-23.4) circle (3);
+    \draw (18.3,-23.4) node {$x_a=1$};
+    \draw [black] (48.5,-9.5) circle (3);
+    \draw (48.5,-9.5) node {$x_a=0$};
+    \draw [black] (33.5,-23.4) circle (3);
+    \draw (33.5,-23.4) node {$True$};
+    \draw [black] (18.3,-9.5) circle (3);
+    \draw (18.3,-9.5) node {$*x_a=1$};
+    \draw [black] (48.5,-23.4) circle (3);
+    \draw (48.5,-23.4) node {$x_a=0$};
+    \draw [black] (15.362,-22.855) arc (287.21852:-0.78148:2.25);
+    \draw (12.32,-17.96) node [left] {$b$};
+    \fill [black] (16.95,-20.74) -- (17.19,-19.82) -- (16.23,-20.12);
+    \draw [black] (49.029,-6.559) arc (197.52793:-90.47207:2.25);
+    \draw (53.9,-3.57) node [above] {$ac$};
+    \fill [black] (51.16,-8.13) -- (52.07,-8.37) -- (51.77,-7.41);
+    \draw [black] (32.177,-20.72) arc (234:-54:2.25);
+    \draw (33.5,-16.15) node [above] {$abc$};
+    \fill [black] (34.82,-20.72) -- (35.7,-20.37) -- (34.89,-19.78);
+    \draw [black] (21.3,-23.4) -- (30.5,-23.4);
+    \fill [black] (30.5,-23.4) -- (29.7,-22.9) -- (29.7,-23.9);
+    \draw (25.9,-23.9) node [below] {$ac$};
+    \draw [black] (18.3,-12.5) -- (18.3,-20.4);
+    \fill [black] (18.3,-20.4) -- (18.8,-19.6) -- (17.8,-19.6);
+    \draw (18.8,-16.45) node [right] {$b$};
+    \draw [black] (15.516,-8.413) arc (276.39744:-11.60256:2.25);
+    \draw (12.35,-4.03) node [above] {$ac$};
+    \fill [black] (17.47,-6.63) -- (17.88,-5.78) -- (16.88,-5.89);
+    \draw [black] (21.3,-9.5) -- (45.5,-9.5);
+    \fill [black] (45.5,-9.5) -- (44.7,-9) -- (44.7,-10);
+    \draw [black] (45.5,-9.5) -- (21.3,-9.5);
+    \fill [black] (21.3,-9.5) -- (22.1,-10) -- (22.1,-9);
+    \draw (33.4,-9) node [above] {$c$};
+    \draw [black] (48.5,-12.5) -- (48.5,-20.4);
+    \fill [black] (48.5,-20.4) -- (49,-19.6) -- (48,-19.6);
+    \draw (48,-16.45) node [left] {$b$};
+    \draw [black] (49.552,-20.603) arc (187.12:-100.88:2.25);
+    \draw (53.96,-17.32) node [right] {$b$};
+    \fill [black] (51.36,-22.53) -- (52.22,-22.93) -- (52.09,-21.94);
+    \draw [black] (45.5,-23.4) -- (36.5,-23.4);
+    \fill [black] (36.5,-23.4) -- (37.3,-23.9) -- (37.3,-22.9);
+    \draw (41,-23.9) node [below] {$ac$};
+    \end{tikzpicture}
+    \end{center}
 
     \item The update product of the two models \textbf{M''} = \textbf{M}
     $\bigotimes$ \textbf{$\Sigma$'} : \\
