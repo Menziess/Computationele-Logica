@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.11.10)  15 NOV 2017 23:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6400) (preloaded format=pdflatex 2017.11.10)  15 NOV 2017 23:24
 entering extended mode
 **"./Assignment 2.tex"
 ("Assignment 2.tex"
@@ -852,26 +852,26 @@ Overfull \hbox (74.3346pt too wide) in paragraph at lines 428--429
  []
 
 [4]
-Underfull \hbox (badness 10000) in paragraph at lines 478--480
+Underfull \hbox (badness 10000) in paragraph at lines 481--483
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 491--492
+Underfull \hbox (badness 10000) in paragraph at lines 494--495
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 507--509
+Underfull \hbox (badness 10000) in paragraph at lines 510--512
 
  []
 
 [5] [6] ("Assignment 2.aux") ) 
 Here is how much of TeX's memory you used:
- 13085 strings out of 495223
- 257317 string characters out of 3181536
- 299721 words of memory out of 3000000
- 16128 multiletter control sequences out of 15000+200000
+ 13093 strings out of 495223
+ 257467 string characters out of 3181536
+ 300197 words of memory out of 3000000
+ 16136 multiletter control sequences out of 15000+200000
  9231 words of font info for 34 fonts, out of 3000000 for 9000
  14 hyphenation exceptions out of 8191
  55i,6n,68p,465b,679s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -886,7 +886,7 @@ live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/te
 xmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive/texmf-dist/fon
 ts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on "Assignment 2.pdf" (6 pages, 142136 bytes).
+Output written on "Assignment 2.pdf" (6 pages, 142492 bytes).
 PDF statistics:
  68 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
