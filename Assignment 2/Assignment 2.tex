@@ -29,31 +29,11 @@
 \section*{Exercise 1}
 
 \begin{enumerate}
-
-    \item The sentence $\theta$ encoding all information: \\
-
-    The Queen knows the following: \\
-    Alice knows Bob has a red hat. Alice knows Bob doesn't know it, and she
-    knows the Queen knows this. Alice doesn't know her own hat. \\
-    Bob knows Alice has a red hat. Bob knows Alice doesn't know it, and he
-    knows the Queen knows this. Bob doesn't know his own hat. \\
-
-    $\theta$ =
-        $K_q (
-        K_a (
-            r_b \wedge
-            \neg K_b (r_b \vee w_b) \wedge
-            K_q ((r_a \vee r_w) \wedge (r_b \vee r_w))
-        )
-        \wedge \neg K_a (r_a \vee w_a)
-        \wedge
-        K_b (
-            r_a \wedge
-            \neg K_a (r_a \vee w_a) \wedge
-            K_q ((r_a \vee r_w) \wedge (r_b \vee r_w))
-        )
-        \wedge \neg K_b (r_b \vee w_b)
-        )$
+	\item The sentence $\theta$ encoding all information:
+	   
+    Alice and Bob have red hats, Alice knows that Bob has a red hat, Bob knows Alice has a red hat, the queen knows Alice and Bob have red hats, the queen knows that Alice knows that Bob has a red hat, the queen knows that Bob knows that Alice has a red hat. It is common knowledge that the queen knows the color of Alice's and Bob's hats, it is common knowledge that Alice knows the color of Bob's hat, it is common knowledge that Bob knows the color of Alice's hat, it is common knowledge that Alice and Bob don't know the color of their own hats, it is common knowledge that both Alice and Bob know that they have either a red or white hat and it is common knowledge that there are two red hats and one white hat.
+    
+    $\theta = r_a \land r_b \land K_a(r_b) \land K_b(r_a) \land K_q(r_a) \land K_q(r_b) \land K_q(K_a(r_b)) \land K_q(K_b(r_a)) \land CK(K_q(r_a \lor w_a)) \land CK(K_q(r_b \lor w_b)) \land CK(K_a(r_b \lor w_b)) \land CK(K_b(r_a \lor w_a)) \land CK(\neg K_a(r_a)) \land CK(\neg K_a(\neg r_a)) \land CK(\neg K_a(w_a)) \land CK(\neg K_a(\neg w_a)) \land CK(\neg K_b(r_b)) \land CK(\neg K_b(\neg r_b)) \land CK(\neg K_b(w_b)) \land CK(\neg K_b(\neg w_b)) \land CK((r_a \land r_b) \lor (r_a \land w_b) \lor (w_a \land r_b))$
 
     \item A representation of the situation model \textbf{M}: \\
 
