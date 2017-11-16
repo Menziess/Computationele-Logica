@@ -748,7 +748,7 @@ In the following, each of the children will be asked a number of questions, whic
     
     \textbf{Write down a sentence $\varphi$ in epistemic logic that expresses her \textit{answer}}.
     
-    $\varphi$ = K$_a \neg 0_a$
+    $\varphi$ = K$_a(\neg 0_a)$
     
     \item Interpreting the above answer as a truthful public announcement $!\varphi$ of the sentence written in the previous part, \textbf{represent (draw) the updated model M$_2$ = M$_1^{!\varphi}$ after this public announcement}.
     
@@ -821,17 +821,36 @@ In the following, each of the children will be asked a number of questions, whic
 	
     \textbf{Write down a sentence $\psi$ in epistemic logic that expresses her \textit{answer}}.
     
-    BlaBlaBla
+    $\psi$ = $\neg$K$_a(1_a) \land \neg$K$_a(\neg 1_a)$
     
     \item Interpreting the above answer as a truthful public announcement $!\psi$ of the sentence written in the previous part, \textbf{represent (draw) the updated model M$_4$ = M$_3^{!\psi}$ after this public announcement}.
     
-    BlaBlaBla
+    \begin{center}
+	\begin{tikzpicture}[scale=0.2]
+		\tikzstyle{every node}+=[inner sep=0pt]
+		\draw [black] (37,-17.1) circle (3);
+		\draw (37,-17.1) node {$1,\mbox{ }2$};
+		\draw [black] (37,-28.3) circle (3);
+		\draw (37,-28.3) node {$3,\mbox{ }2$};
+		\draw [black] (37,-25.3) -- (37,-20.1);
+		\fill [black] (37,-20.1) -- (36.5,-20.9) -- (37.5,-20.9);
+		\draw [black] (37,-20.1) -- (37,-25.3);
+		\fill [black] (37,-25.3) -- (37.5,-24.5) -- (36.5,-24.5);
+		\draw (36.5,-22.7) node [left] {$a,\mbox{ }b$};
+		\draw [black] (37.663,-14.186) arc (194.90614:-93.09386:2.25);
+		\draw (43.21,-11.37) node [above] {$a,\mbox{ }b$};
+		\fill [black] (39.72,-15.85) -- (40.62,-16.13) -- (40.36,-15.17);
+		\draw [black] (38.57,-25.757) arc (176.04546:-111.95454:2.25);
+		\draw (43.35,-23.42) node [right] {$a,\mbox{ }b$};
+		\fill [black] (39.97,-28) -- (40.74,-28.55) -- (40.81,-27.56);
+	\end{tikzpicture}
+	\end{center}
     
     \item Suppose now that, \textit{after} Alice answered as above, Bob is asked the ``same'' question: \textit{``Do you (Bob) know whether your own number is equal to $1$ or not, and if so then which of the two}?''
     
     \textbf{What will Bob answer}? Also, \textbf{what is his number}? Justify your answers!
     
-    BlaBlaBla
+    Bob will answer (c) \textit{I know that my number is NOT equal to $1$}, because in M$_4$ there is no world in which Bob knows his number is 1 (there is no $b$-arrow to a world where $n_b=1$). $n_b = 2$, because in all possible worlds in M$_4$ Bob's number is 2.
 
 \end{enumerate}
 
