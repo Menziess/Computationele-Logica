@@ -723,7 +723,24 @@ In the following, each of the children will be asked a number of questions, whic
 
     \item For your model, consider now the following \textit{four atomic sentences} $0_a, 0_b, 1_a, 1_b$. Here, $0_a$ means ``Alice's number is equal to 0'' (i.e. $n_a = 0$), and $0_b$ means ``Bob's number is equal to 0'' (i.e. $n_b = 0$); $1_a$ means ``Alice's number is equal to 1'' (i.e. $n_a = 1$), and $1_b$ means ``Bob's number is equal to 1'' (i.e. $n_b = 1$). \textbf{Specify the valuation for these atomic sentences} in the above model.
     
-    BlaBlaBla
+    We only learned how to valuate worlds, and the valuation of a world is the set of basic facts that are true in that world. So when we only consider the four atomic sentences above, we have as valuations:
+    
+    \begin{itemize}[label={}]
+    	\item $\nu((0, 1))= \{0_a, 1_b\}$
+    	\item $\nu((1, 0))= \{1_a, 0_b\}$
+    	\item $\nu((2, 1))= \{1_b\}$
+    	\item $\nu((1, 2))= \{1_a\}$
+    	\item in all other worlds $v$: $\nu(v) = \emptyset$
+    \end{itemize}
+    
+    If we assume ``valuation of an atomic sentence'' means ``specify the set of worlds in which the atomic sentence is true'', then the valuations are:
+    
+    \begin{itemize}[label={}]
+    	\item $\nu(0_a)= \{(0, 1)\}$
+    	\item $\nu(0_b)= \{(1, 0)\}$
+    	\item $\nu(1_a)= \{(1, 0), (1, 2)\}$
+    	\item $\nu(1_b)= \{(0, 1), (2, 1)\}$
+    \end{itemize}    
     
     \item Alice is asked the following question: \textit{``Do you know whether your own number is equal to $0$ or not, and if so then which of the two?''} So her answers can be: (a) \textit{I don't know}, (b) \textit{I know that my number is equal to $0$}, or (c) \textit{I know that my number is NOT equal to $0$}.
     
@@ -731,17 +748,72 @@ In the following, each of the children will be asked a number of questions, whic
     
     \textbf{Write down a sentence $\varphi$ in epistemic logic that expresses her \textit{answer}}.
     
-    BlaBlaBla
+    $\varphi$ = K$_a \neg 0_a$
     
     \item Interpreting the above answer as a truthful public announcement $!\varphi$ of the sentence written in the previous part, \textbf{represent (draw) the updated model M$_2$ = M$_1^{!\varphi}$ after this public announcement}.
     
-    BlaBlaBla
+    For simplicity we skipped the loops (every world has an $a$- and $b$-arrow to itself) and we skipped a lot of $b$-arrows (every world has a $b$-arrow to every other world).
+    \begin{center}
+    \begin{tikzpicture}[scale=0.2]
+	    \tikzstyle{every node}+=[inner sep=0pt]
+	    \draw [black] (38.7,-11.7) circle (3);
+	    \draw (38.7,-11.7) node {$1,\mbox{ }0$};
+	    \draw [black] (38.7,-22.3) circle (3);
+	    \draw (38.7,-22.3) node {$1,\mbox{ }2$};
+	    \draw [black] (25,-33.2) circle (3);
+	    \draw (25,-33.2) node {$2,\mbox{ }3$};
+	    \draw [black] (38.7,-33.2) circle (3);
+	    \draw (38.7,-33.2) node {$3,\mbox{ }2$};
+	    \draw [black] (25,-44.6) circle (3);
+	    \draw (25,-44.6) node {$4,\mbox{ }3$};
+	    \draw [black] (38.7,-44.6) circle (3);
+	    \draw (38.7,-44.6) node {$3,\mbox{ }4$};
+	    \draw (25,-56) node {$....$};
+	    \draw (38.7,-56) node {$....$};
+	    \fill [black] (38.7,-19.3) -- (39.2,-18.5) -- (38.2,-18.5);
+	    \draw (38.2,-17) node [left] {$b$};
+	    \draw [black] (38.7,-25.3) -- (38.7,-30.2);
+	    \fill [black] (38.7,-30.2) -- (39.2,-29.4) -- (38.2,-29.4);
+	    \draw (38.2,-27.75) node [left] {$a, b$};
+	    %\draw [black] (25,-25.3) -- (25,-30.2);
+	    %\fill [black] (25,-30.2) -- (25.5,-29.4) -- (24.5,-29.4);
+	    %\draw (24.5,-27.75) node [left] {$b$};
+	    \draw [black] (38.7,-36.2) -- (38.7,-41.6);
+	    \fill [black] (38.7,-41.6) -- (39.2,-40.8) -- (38.2,-40.8);
+	    \draw (38.2,-38.9) node [left] {$b$};
+	    \draw [black] (38.7,-47.6) -- (38.7,-53);
+	    \fill [black] (38.7,-53) -- (39.2,-52.2) -- (38.2,-52.2);
+	    \draw (38.2,-50.3) node [left] {$a, b$};
+	    \draw [black] (25,-47.6) -- (25,-53);
+	    \fill [black] (25,-53) -- (25.5,-52.2) -- (24.5,-52.2);
+	    \draw (24.5,-50.3) node [left] {$b$};
+	    \draw [black] (25,-36.2) -- (25,-41.6);
+	    \fill [black] (25,-41.6) -- (25.5,-40.8) -- (24.5,-40.8);
+	    \draw (24.5,-38.9) node [left] {$a, b$};
+	    %\draw [black] (25,-19.3) -- (25,-14.7);
+	    %\fill [black] (25,-14.7) -- (24.5,-15.5) -- (25.5,-15.5);
+	    \draw [black] (38.7,-19.3) -- (38.7,-14.7);
+	    \fill [black] (38.7,-14.7) -- (38.2,-15.5) -- (39.2,-15.5);
+	    \draw [black] (38.7,-30.2) -- (38.7,-25.3);
+	    \fill [black] (38.7,-25.3) -- (38.2,-26.1) -- (39.2,-26.1);
+	    %\draw [black] (25,-30.2) -- (25,-25.3);
+	    %\fill [black] (25,-25.3) -- (24.5,-26.1) -- (25.5,-26.1);
+	    \draw [black] (25,-41.6) -- (25,-36.2);
+	    \fill [black] (25,-36.2) -- (24.5,-37) -- (25.5,-37);
+	    \draw [black] (38.7,-41.6) -- (38.7,-36.2);
+	    \fill [black] (38.7,-36.2) -- (38.2,-37) -- (39.2,-37);
+	    \draw [black] (38.7,-53) -- (38.7,-47.6);
+	    \fill [black] (38.7,-47.6) -- (38.2,-48.4) -- (39.2,-48.4);
+	    \draw [black] (25,-53) -- (25,-47.6);
+	    \fill [black] (25,-47.6) -- (24.5,-48.4) -- (25.5,-48.4);
+    \end{tikzpicture}
+    \end{center}
     
     \item Suppose now that, \textit{after} Alice answered as above, Bob is asked the ``same'' question: \textit{``Do you (Bob) know whether your own number is equal to $0$ or not, and if so then which of the two}?''
     
     \textbf{What will Bob answer}? Also, \textbf{what will be updated model M$_3$ representing the situation after he answers}? Justify your answers!
     
-    BlaBlaBla
+    Bob will answer (a) \textit{I don't know}, because in all worlds of M$_2$ Bob thinks every other world is possible (there are $b$-arrows going from each world to each other world). M$_3$ = M$_2$ (we cannot remove worlds), because there is no world in which Bob's answer (``I don't know'') is false.
     
     \item After the previous round of questions, Alice is now asked the following question: \textit{``Do you know whether your own number is equal to $1$ or not, and if so then which of the two}?'' The asnwers can be: (a) \textit{I don't know}, (b) \textit{I know that my number is equal to $1$}, or (c) \textit{I know that my number is NOT equal to $1$}.
     
