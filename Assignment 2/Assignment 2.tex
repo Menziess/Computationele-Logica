@@ -320,21 +320,22 @@ We mark real worlds/events with an $*$.
     \begin{tikzpicture}[scale=0.2]
     \tikzstyle{every node}+=[inner sep=0pt]
     \draw [black] (65.3,-48.5) circle (3);
-    \draw (65.3,-48.5) node {$000$};
+    \draw (65.3,-48.5) node {$0,0,0$};
     \draw [black] (32.4,-34.6) circle (3);
-    \draw (32.4,-34.6) node {$101$};
+    \draw (32.4,-34.6) node {$1,0,1$};
     \draw [black] (46.9,-34.6) circle (3);
-    \draw (46.9,-34.6) node {$110$};
+    \draw (46.9,-34.6) node {$1,1,0$};
     \draw [black] (12.8,-48.5) circle (3);
-    \draw (12.8,-48.5) node {$011$};
+    \draw (12.8,-48.5) node {$0,1,1$};
     \draw [black] (32.4,-20.7) circle (3);
-    \draw (32.4,-20.7) node {$101$};
+    \draw (32.4,-20.7) node {$1,0,1$};
     \draw [black] (46.9,-20.7) circle (3);
-    \draw (46.9,-20.7) node {$110$};
+    \draw (46.9,-20.7) node {$1,1,0$};
     \draw [black] (65.3,-6.7) circle (3);
-    \draw (65.3,-6.7) node {$110$};
+    \draw (65.3,-6.7) node {$1,1,0$};
     \draw [black] (12.8,-6.7) circle (3);
-    \draw (12.8,-6.7) node {$*101$};
+    \draw (12.8,-6.7) node {$1,0,1$};
+    \draw (9.3,-5.7) node {$*$};
     \draw [black] (62.54,-47.33) -- (35.16,-35.77);
     \fill [black] (35.16,-35.77) -- (35.71,-36.54) -- (36.1,-35.62);
     \draw (49.82,-41.04) node [above] {$b$};
@@ -366,32 +367,32 @@ We mark real worlds/events with an $*$.
     \draw [black] (49.29,-36.41) -- (62.91,-46.69);
     \fill [black] (62.91,-46.69) -- (62.57,-45.81) -- (61.97,-46.61);
     \draw [black] (68.233,-49.073) arc (106.67475:-181.32525:2.25);
-    \draw (71.24,-54) node [right] {$abc$};
+    \draw (71.24,-54) node [right] {$a,b,c$};
     \fill [black] (66.63,-51.18) -- (66.38,-52.09) -- (67.34,-51.8);
     \draw [black] (11.497,-51.189) arc (1.88392:-286.11608:2.25);
-    \draw (6.9,-54.06) node [left] {$abc$};
+    \draw (6.9,-54.06) node [left] {$a,b,c$};
     \fill [black] (9.87,-49.1) -- (9.06,-48.63) -- (9.09,-49.63);
     \draw [black] (49.421,-32.996) arc (150.19:-137.81:2.25);
-    \draw (54.26,-33.77) node [right] {$abc$};
+    \draw (54.26,-33.77) node [right] {$a,b,c$};
     \fill [black] (49.71,-35.63) -- (50.15,-36.46) -- (50.65,-35.59);
     \draw [black] (29.587,-35.607) arc (317.43022:29.43022:2.25);
-    \draw (25.03,-33.71) node [left] {$abc$};
+    \draw (25.03,-33.71) node [left] {$a,b,c$};
     \fill [black] (29.89,-32.98) -- (29.64,-32.07) -- (28.96,-32.81);
     \draw [black] (34.57,-22.78) -- (44.73,-32.52);
     \fill [black] (44.73,-32.52) -- (44.5,-31.61) -- (43.81,-32.33);
-    \draw (38.69,-28.13) node [below] {$a$};
+    \draw (38.69,-29.13) node [below] {$a$};
     \draw [black] (45.577,-18.02) arc (234:-54:2.25);
     \draw (46.9,-13.45) node [above] {$b$};
     \fill [black] (48.22,-18.02) -- (49.1,-17.67) -- (48.29,-17.08);
     \draw [black] (44.73,-22.78) -- (34.57,-32.52);
     \fill [black] (34.57,-32.52) -- (35.49,-32.33) -- (34.8,-31.61);
-    \draw (38.69,-27.17) node [above] {$a$};
+    \draw (38.69,-26.17) node [above] {$a$};
     \draw [black] (31.077,-18.02) arc (234:-54:2.25);
     \draw (32.4,-13.45) node [above] {$b$};
     \fill [black] (33.72,-18.02) -- (34.6,-17.67) -- (33.79,-17.08);
     \draw [black] (32.4,-23.7) -- (32.4,-31.6);
     \fill [black] (32.4,-31.6) -- (32.9,-30.8) -- (31.9,-30.8);
-    \draw (32.9,-27.65) node [right] {$ac$};
+    \draw (32.9,-27.65) node [right] {$a,c$};
     \draw [black] (15.24,-8.44) -- (29.96,-18.96);
     \fill [black] (29.96,-18.96) -- (29.6,-18.08) -- (29.02,-18.9);
     \draw (23.6,-13.2) node [above] {$b$};
@@ -400,7 +401,7 @@ We mark real worlds/events with an $*$.
     \draw (55.1,-13.2) node [above] {$b$};
     \draw [black] (46.9,-23.7) -- (46.9,-31.6);
     \fill [black] (46.9,-31.6) -- (47.4,-30.8) -- (46.4,-30.8);
-    \draw (46.4,-27.65) node [left] {$ac$};
+    \draw (46.4,-27.65) node [left] {$a,c$};
     \draw [black] (68.277,-6.96) arc (112.73627:-175.26373:2.25);
     \draw (71.71,-11.47) node [right] {$a$};
     \fill [black] (66.9,-9.22) -- (66.75,-10.15) -- (67.67,-9.77);
@@ -420,7 +421,7 @@ We mark real worlds/events with an $*$.
     \draw (22.01,-22.01) node [left] {$c$};
     \draw [black] (30.67,-23.15) -- (14.53,-46.05);
     \fill [black] (14.53,-46.05) -- (15.4,-45.68) -- (14.58,-45.11);
-    \draw (22.01,-33.23) node [left] {$c$};
+    \draw (25.01,-30.23) node [left] {$c$};
     \draw [black] (65.3,-9.7) -- (65.3,-45.5);
     \fill [black] (65.3,-45.5) -- (65.8,-44.7) -- (64.8,-44.7);
     \draw (64.8,-27.6) node [left] {$c$};
@@ -429,7 +430,7 @@ We mark real worlds/events with an $*$.
     \draw (56.71,-21.98) node [right] {$c$};
     \draw [black] (48.56,-23.2) -- (63.64,-46);
     \fill [black] (63.64,-46) -- (63.62,-45.06) -- (62.79,-45.61);
-    \draw (55.49,-35.93) node [left] {$c$};
+    \draw (55.49,-30.23) node [left] {$c$};
     \end{tikzpicture}
     \end{center}
 
