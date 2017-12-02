@@ -4,6 +4,7 @@
 \usepackage{tikz}
 \usepackage[parfill]{parskip} % Don't start new paragraph with tab.
 \usepackage{amsmath} % For \tag and \eqref
+\usepackage{amssymb}
 
 \title{Computationele logica}
 \author{
@@ -27,5 +28,86 @@
 %% Exercise 1 %%
 %%%%%%%%%%%%%%%%
 \section*{Exercise 1}
+
+\textit{(a) Show the following equivalence:}
+\begin{center}
+    $K_a \varphi \Leftrightarrow B_a^{\neg \varphi} false$
+\end{center}
+
+[ANSWER HERE]
+
+\textit{(b) Prove semantically the equivalence claimed on Slide 24 of Lecture Notes 4.2:}
+\begin{center}
+    $B_a \phi \Leftrightarrow \lozenge_a \square_a \phi$
+\end{center}
+where $\Diamond a \phi : \neg \square a \neg \phi$ is the dual modality to safe
+belief $\square a$.
+
+[ANSWER HERE]
+
+\textit{(c) Prove (via a counterexample) that safe belief does NOT imply strong belief; i.e. that}
+\begin{center}
+    $\square_a \varphi \nRightarrow Sb_a \varphi$
+\end{center}
+
+[ANSWER HERE]
+
+\textbf{HINT}: The positive statements (a) and (b) need general proofs: you
+need to show that, for every plausibility model and every sentence $\phi$, the
+desired formula is true at all the worlds of that model. But the negative
+statement (c) must be shown by giving a counterexample: construct some
+plausibility model and find some sentence $\varphi$ for which the implication
+fails to be true at some world of that model (which we can think of as the
+“real world”).
+
+%%%%%%%%%%%%%%%%
+%% Exercise 2 %%
+%%%%%%%%%%%%%%%%
+\section*{Exercise 2}
+
+\begin{enumerate}
+    \item \textit{Write down a logical formula in the language of beliefs,
+    knowledge and conditional beliefs to encode all the above assumptions.}
+
+    [ANSWER HERE]
+
+    \item \textit{Represent the agent’s beliefs (and conditional beliefs),
+    using a plausibility model with four possible worlds. Specify the valuation
+    (which atomic sentences of the two atomic sentences d and t are true at
+    which worlds). Represent the agent’s plausibility relation on these worlds,
+    by drawing arrows going from the less plausible worlds to the more plausible
+    ones.}
+
+    [ANSWER HERE]
+
+    \item \textit{Suppose somebody who never lies tells our agent “You are
+    close to the target if and only if you believe that you are in a dangerous
+    zone.” Write down formally this sentence as a formula $\varphi$ in doxastic
+    logic (using the atomic sentences).}
+
+    [ANSWER HERE]
+
+    \item \textit{Interpreting the above truthful announcement $!\varphi$ as an
+    update with the sentence $\varphi$ in the previous part, represent the
+    updated model.}
+
+    [ANSWER HERE]
+
+    \item \textit{After the previous announcement, another truthful
+    announcement is made: “You are in a dangerous zone if and only if you don’t
+    believe that you are in a dangerous zone.” Write down formally this
+    sentence as a formula $\psi$ in doxastic logic (using the atomic
+    sentences).}
+
+    [ANSWER HERE]
+
+    \item \textit{What is the real world? (In other words, answer the question:
+    is the agent in a dangerous zone or not, and is he close to the target or
+    not?) Justify your answer, by interpreting the announcement in the previous
+    part as a new update $\neg \psi$ and representing the updated model.}
+
+    [ANSWER HERE]
+
+\end{enumerate}
 
 \end{document}
