@@ -32,7 +32,7 @@
 \lVert \varphi \rVert_M\}$
 
 \textbf{Conditional Belief:} $\lVert B_a^\varphi \psi \rVert_M = \{s \in
-W:best_a(\lVert\varphi\rVert_M \cap s(a)) \subseteq \lVert\psi\rVert_M\}$ \\
+W:best_a(\lVert\varphi\rVert_M \cap s(a)) \subseteq \lVert\psi\rVert_M\}$
 
 
 %%%%%%%%%%%%%%%%
@@ -45,13 +45,18 @@ W:best_a(\lVert\varphi\rVert_M \cap s(a)) \subseteq \lVert\psi\rVert_M\}$ \\
     $K_a \varphi \Leftrightarrow B_a^{\neg \varphi} false$
 \end{center}
 
-Take $s \in W$ such that $s \models_M K_a \varphi$ \textbf{(1)}.
+Take $s \in W$ such that $s \models_M K_a \varphi$.
 
-Because \textbf{(1)} and \textbf{(Knowledge)} for all $t \in s(a)$ it's true
-that: $t \models_M \varphi$ \textbf{(2)}.
+Therefore for all $t \in s(a)$ it's true that: $t \models_M
+\varphi$.
 
-Eliminating any world or all worlds either results in a world from s(a), where $K_a \varphi$, or no worlds at all, so $false$. \\
+Using conditional belief:
+$\lVert B_a^{\neg \varphi}false\rVert_M=\{v\in W:best_a(\lVert\neg\varphi\rVert_M\cap v(a))\subseteq\lVert false\rVert_M\}$
+
+Eliminating any world or all worlds either results in a world from s(a), where $K_a \varphi$, or no worlds at all, so $false$.
+
 % TODO: Nog niet af
+[ANSWER HERE] \\
 
 
 \textit{(b) Prove semantically the equivalence claimed on Slide 24 of Lecture
@@ -62,7 +67,9 @@ Notes 4.2:}
 where $\Diamond a \phi : \neg \square a \neg \phi$ is the dual modality to safe
 belief $\square a$.
 
-[ANSWER HERE]
+
+
+
 
 \textit{(c) Prove (via a counterexample) that safe belief does NOT imply strong
 belief; i.e. that}
@@ -70,7 +77,24 @@ belief; i.e. that}
     $\square_a \varphi \nRightarrow Sb_a \varphi$
 \end{center}
 
-[ANSWER HERE]
+The thought that Albert can be drunk can only be gained by new information, but
+it's not strongly believed initially:
+
+\begin{center}
+\begin{tikzpicture}[scale=0.2]
+\tikzstyle{every node}+=[inner sep=0pt]
+\draw [black] (7.55,-6.55) circle (3);
+\draw (7.55,-6.55) node {$d,\mbox{ }g$};
+\draw [black] (18.35,-6.55) circle (3);
+\draw (18.35,-6.55) node {$d,\mbox{ }~g$};
+\draw [black] (29.55,-6.55) circle (3);
+\draw (29.55,-6.55) node {$~d,\mbox{ }g$};
+\draw [black] (10.55,-6.55) -- (15.35,-6.55);
+\fill [black] (15.35,-6.55) -- (14.55,-6.05) -- (14.55,-7.05);
+\draw [black] (21.35,-6.55) -- (26.55,-6.55);
+\fill [black] (26.55,-6.55) -- (25.75,-6.05) -- (25.75,-7.05);
+\end{tikzpicture}
+\end{center}
 
 \textbf{HINT}: The positive statements (a) and (b) need general proofs: you
 need to show that, for every plausibility model and every sentence $\phi$, the
@@ -83,7 +107,6 @@ fails to be true at some world of that model (which we can think of as the
 %%%%%%%%%%%%%%%%
 %% Exercise 2 %%
 %%%%%%%%%%%%%%%%
-\pagebreak
 \section*{Exercise 2}
 
 % A virtual agent in a video game doesn’t know his current position in the
