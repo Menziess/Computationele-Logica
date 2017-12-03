@@ -88,13 +88,11 @@ fails to be true at some world of that model (which we can think of as the
 
 % A virtual agent in a video game doesn’t know his current position in the
 % virtual space, but all he cares is (a) whether or not he’s in a “Dangerous”
-% zone (say, close to a dangerous monster)
-\textit{d = the agent is in a dangerous zone}
+% zone (say, close to a dangerous monster).
 
 % And (b) whether or not he’s close to his Target (say, a treasure). Let’s use
 % the letter d to denote the sentence the agent is in a dangerous zone, and the
 % letter t to denote the sentence the agent is close to the target.
-\textit{t = the agent is close to the target}
 
 % These possibilities are independent of each other, and the agent doesn’t know
 % which is the case, so he cannot exclude any of the four possible cases d∧t,
@@ -110,11 +108,14 @@ fails to be true at some world of that model (which we can think of as the
     % If he would learn that this belief is WRONG (i.e. that at least one of
     % his two beliefs is false), then he’d still believe (conditional on this
     % new information) that he is close to the target.
-        B_a^{ \neg (t \wedge \neg d)} t \wedge
+    %    B_a^{ \neg (t \wedge \neg d)} t \wedge % EERSTE POGING
     % But if he would learn instead that he’s far from (=NOT close to) the
     % target, then (conditional on this information) he’d keep his initial
     % belief that he’s NOT in a dangerous zone.
-        B_a^{(\neg t)} \neg d
+    %   B_a^{(\neg t)} \neg d % EERSTE POGING
+        B_a^{(t \wedge d)} (t \wedge d) \wedge
+        B_a^{(\neg t \wedge \neg d)} (\neg t \wedge \neg d) \wedge
+        B_a^{(\neg t \wedge d)} (\neg t \wedge \neg d)
     \]
 
     \item \textit{Represent the agent’s beliefs (and conditional beliefs),
@@ -148,13 +149,30 @@ fails to be true at some world of that model (which we can think of as the
     zone.” Write down formally this sentence as a formula $\varphi$ in doxastic
     logic (using the atomic sentences).}
 
-    [ANSWER HERE]
+    $\varphi \coloneqq t_a^{(B_a d)} \wedge B_a d^{(t_a)}$
 
     \item \textit{Interpreting the above truthful announcement $!\varphi$ as an
     update with the sentence $\varphi$ in the previous part, represent the
     updated model.}
 
-    [ANSWER HERE]
+    \begin{center}
+    \begin{tikzpicture}[scale=0.2]
+    \tikzstyle{every node}+=[inner sep=0pt]
+    \draw [black] (51.233,-16.211) circle (3);
+    \draw (51.23,-16.21) node {$t,\mbox{ }d$};
+    % \draw [black] (24.133,-16.211) circle (3);
+    % \draw (24.13,-16.21) node {$d$};
+    % \draw [black] (64.056,-16.211) circle (3);
+    % \draw (64.06,-16.21) node {$t$};
+    \draw [black] (38.156,-16.211) circle (3);
+    % \draw [black] (54.23,-16.21) -- (61.06,-16.21);
+    % \fill [black] (61.06,-16.21) -- (60.26,-15.71) -- (60.26,-16.71);
+    % \draw [black] (27.13,-16.21) -- (35.16,-16.21);
+    % \fill [black] (35.16,-16.21) -- (34.36,-15.71) -- (34.36,-16.71);
+    \draw [black] (41.16,-16.21) -- (48.23,-16.21);
+    \fill [black] (48.23,-16.21) -- (47.43,-15.71) -- (47.43,-16.71);
+    \end{tikzpicture}
+    \end{center}
 
     \item \textit{After the previous announcement, another truthful
     announcement is made: “You are in a dangerous zone if and only if you don’t
@@ -162,14 +180,35 @@ fails to be true at some world of that model (which we can think of as the
     sentence as a formula $\psi$ in doxastic logic (using the atomic
     sentences).}
 
-    [ANSWER HERE]
+    $\psi \coloneqq d_a^{(B_a \neg d_a)} \wedge B_a \neg d_a^{(d_a)}$
 
     \item \textit{What is the real world? (In other words, answer the question:
     is the agent in a dangerous zone or not, and is he close to the target or
     not?) Justify your answer, by interpreting the announcement in the previous
     part as a new update $\neg \psi$ and representing the updated model.}
 
-    [ANSWER HERE]
+    The agent believes that it's most plausible that he's in a dangerous zone,
+    if $\neg \psi$, the agent knows that if he believes this, he's not in a
+    dangerous zone.
+
+    \begin{center}
+    \begin{tikzpicture}[scale=0.2]
+    \tikzstyle{every node}+=[inner sep=0pt]
+    % \draw [black] (51.233,-16.211) circle (3);
+    % \draw (51.23,-16.21) node {$t,\mbox{ }d$};
+    % \draw [black] (24.133,-16.211) circle (3);
+    % \draw (24.13,-16.21) node {$d$};
+    % \draw [black] (64.056,-16.211) circle (3);
+    % \draw (64.06,-16.21) node {$t$};
+    \draw [black] (38.156,-16.211) circle (3);
+    % \draw [black] (54.23,-16.21) -- (61.06,-16.21);
+    % \fill [black] (61.06,-16.21) -- (60.26,-15.71) -- (60.26,-16.71);
+    % \draw [black] (27.13,-16.21) -- (35.16,-16.21);
+    % \fill [black] (35.16,-16.21) -- (34.36,-15.71) -- (34.36,-16.71);
+    % \draw [black] (41.16,-16.21) -- (48.23,-16.21);
+    % \fill [black] (48.23,-16.21) -- (47.43,-15.71) -- (47.43,-16.71);
+    \end{tikzpicture}
+    \end{center}
 
 \end{enumerate}
 
