@@ -18,7 +18,7 @@
     Schenk, Stefan\\
     \texttt{11881798}
 }
-\date{November 2017}
+\date{December 2017}
 
 \begin{document}
 
@@ -109,17 +109,22 @@ fails to be true at some world of that model (which we can think of as the
 %%%%%%%%%%%%%%%%
 \section*{Exercise 2}
 
-% A virtual agent in a video game doesn’t know his current position in the
-% virtual space, but all he cares is (a) whether or not he’s in a “Dangerous”
-% zone (say, close to a dangerous monster).
-
-% And (b) whether or not he’s close to his Target (say, a treasure). Let’s use
-% the letter d to denote the sentence the agent is in a dangerous zone, and the
-% letter t to denote the sentence the agent is close to the target.
-
-% These possibilities are independent of each other, and the agent doesn’t know
-% which is the case, so he cannot exclude any of the four possible cases d∧t,
-% d∧¬t, ¬d∧t and ¬d∧¬t.
+A virtual agent in a video game doesn't know his current position in the 
+virtual space, but all he cares is (a) whether or not he's in a ``Dangerous''
+zone (say, close to a dangerous monster), and (b) whether or not he's close to 
+this Target (say, a treasure). Let's use the letter $d$ to denote the sentence 
+\textit{the agent is in a dangerous zone}, and the letter $t$ to denote the 
+sentence \textit{the agent is close to the target}. These possibilities are 
+independent of each other, and the agent \textbf{doesn't know} which is the 
+case, so he \textbf{cannot exclude any} of the four possible cases $d \land t$,
+ $d \land \neg t$, $\neg d \land t$ and $\neg d \land \neg t$. However, our 
+agent \textbf{believes both} that he's close to the target AND that he's NOT in
+ a dangerous zone. \textbf{If} he would learn that this belief is WRONG (i.e. 
+that at least one of his two beliefs is false), then he'd still believe (
+conditional on this new information) that he is close to the target. But 
+\textbf{if} he would learn instead that he's far from (=NOT close to) the 
+target, then (conditional on this information) he'd keep his initial belief 
+that he's NOT in a dangerous zone.
 
 \begin{enumerate}
     \item \textit{Write down a logical formula in the language of beliefs,
