@@ -200,25 +200,29 @@ that he's NOT in a dangerous zone.
 
     $\psi \coloneqq d \leftrightarrow \neg B(d)$
 
-    \item \textit{What is the real world? (In other words, answer the question:
-    is the agent in a dangerous zone or not, and is he close to the target or
-    not?) Justify your answer, by interpreting the announcement in the previous
-    part as a new update $\neg \psi$ and representing the updated model.}
+    \item \textit{\textbf{What is the real world}? (In other words, answer the 
+    question: is the agent in a dangerous zone or not, and is he close to the 
+    target or not?) \textbf{Justify your answer}, by interpreting the 
+    announcement in the previous part as a new update $!\psi$ and 
+    \textbf{representing the updated model}.}
 
-    The agent believes that it's most plausible that he's in a dangerous zone,
-    if $\neg \psi$, the agent knows that if he believes this, he's not in a
-    dangerous zone.
+	Let S be the model of question 2.4. In S, $\psi$ holds only in world 
+	$(\neg t, \, d)$. In this world, $d$ is true and $\neg B(d)$ is true (because 
+	$B(d)$ is false, the agent believes $B(\neg d)$). In the other world, 
+	$(\neg t, \, \neg d)$, $d$ is false but $\neg B(d)$ is true, so $\psi$ doesn't
+	 hold here. Because $\psi$ is truthful, the real world is $(\neg t, \, d)$.
 
     \begin{center}
     \begin{tikzpicture}[scale=0.2]
     \tikzstyle{every node}+=[inner sep=0pt]
     % \draw [black] (51.233,-16.211) circle (3);
-    % \draw (51.23,-16.21) node {$t,\mbox{ }d$};
-    % \draw [black] (24.133,-16.211) circle (3);
-    % \draw (24.13,-16.21) node {$d$};
+    % \draw (51.23,-16.21) node {$t, \, d$};
+    \draw [black] (24.133,-16.211) circle (3);
+    \draw (24.13,-16.21) node {$\neg t, \, d$};
     % \draw [black] (64.056,-16.211) circle (3);
-    % \draw (64.06,-16.21) node {$t$};
-    \draw [black] (38.156,-16.211) circle (3);
+    % \draw (64.06,-16.21) node {$t, \, \neg d$};
+    % \draw [black] (38.156,-16.211) circle (3);
+    % \draw (38.156,-16.211) node {$\neg t, \, \neg d$};
     % \draw [black] (54.23,-16.21) -- (61.06,-16.21);
     % \fill [black] (61.06,-16.21) -- (60.26,-15.71) -- (60.26,-16.71);
     % \draw [black] (27.13,-16.21) -- (35.16,-16.21);
