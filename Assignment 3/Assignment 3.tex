@@ -129,22 +129,10 @@ that he's NOT in a dangerous zone.
 \begin{enumerate}
     \item \textit{Write down a logical formula in the language of beliefs,
     knowledge and conditional beliefs to encode all the above assumptions.}
-    \[
-    % However, our agent believes both that he’s close to the target AND that
-    % he’s NOT in a dangerous zone.
-        B_a(t \wedge \neg d) \wedge
-    % If he would learn that this belief is WRONG (i.e. that at least one of
-    % his two beliefs is false), then he’d still believe (conditional on this
-    % new information) that he is close to the target.
-    %    B_a^{ \neg (t \wedge \neg d)} t \wedge % EERSTE POGING
-    % But if he would learn instead that he’s far from (=NOT close to) the
-    % target, then (conditional on this information) he’d keep his initial
-    % belief that he’s NOT in a dangerous zone.
-    %   B_a^{(\neg t)} \neg d % EERSTE POGING
-        B_a^{(t \wedge d)} (t \wedge d) \wedge
-        B_a^{(\neg t \wedge \neg d)} (\neg t \wedge \neg d) \wedge
-        B_a^{(\neg t \wedge d)} (\neg t \wedge \neg d)
-    \]
+    
+    $\neg K(t) \land \neg K(\neg t) \land \neg K(d) \land \neg K(\neg d) \land
+    B(t \land \neg d) \land B^{\neg (t \land \neg d)}(t) \land 
+    B^{\neg t}(\neg d)$
 
     \item \textit{Represent the agent’s beliefs (and conditional beliefs),
     using a plausibility model with four possible worlds. Specify the valuation
