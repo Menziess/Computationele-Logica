@@ -39,70 +39,66 @@ W:best_a(\lVert\varphi\rVert_M \cap s(a)) \subseteq \lVert\psi\rVert_M\}$
 %% Exercise 1 %%
 %%%%%%%%%%%%%%%%
 \section*{Exercise 1}
+For this exercise, please use the semantic definitions (given in the slides of 
+Lectures 4.1 and 4.2) of knowledge $K\varphi$ in plausibility models, belief 
+$B\varphi$, conditional belief $B^\varphi \psi$ and safe belief $\square 
+\varphi$ (defined as the Kripke modality for the plausibility relation).
 
-\textit{(a) Show the following equivalence:}
-\begin{center}
-    $K_a \varphi \Leftrightarrow B_a^{\neg \varphi} false$
-\end{center}
+\begin{enumerate}[label=(\alph*)]
+	\item \textit{Show the following equivalence:}
+		$$K_a \varphi \Leftrightarrow B_a^{\neg \varphi} false$$
+		[ANSWER HERE]
+		Take $s \in W$ such that $s \models_M K_a \varphi$.
 
-Take $s \in W$ such that $s \models_M K_a \varphi$.
-
-Therefore for all $t \in s(a)$ it's true that: $t \models_M
-\varphi$.
-
-Using conditional belief:
-$\lVert B_a^{\neg \varphi}false\rVert_M=\{v\in W:best_a(\lVert\neg\varphi\rVert_M\cap v(a))\subseteq\lVert false\rVert_M\}$
+		Therefore for all $t \in s(a)$ it's true that: $t \models_M
+		\varphi$.
+		
+		Using conditional belief:
+		$\lVert B_a^{\neg \varphi}false\rVert_M=\{v\in W:best_a(\lVert\neg\varphi\rVert_M\cap v(a))\subseteq\lVert false\rVert_M\}$
 
 Eliminating any world or all worlds either results in a world from s(a), where $K_a \varphi$, or no worlds at all, so $false$.
 
-% TODO: Nog niet af
-[ANSWER HERE] \\
-
-
-\textit{(b) Prove semantically the equivalence claimed on Slide 24 of Lecture
-Notes 4.2:}
-\begin{center}
-    $B_a \phi \Leftrightarrow \lozenge_a \square_a \phi$
-\end{center}
-where $\Diamond a \phi : \neg \square a \neg \phi$ is the dual modality to safe
-belief $\square a$.
-
-
-
-
-
-\textit{(c) Prove (via a counterexample) that safe belief does NOT imply strong
-belief; i.e. that}
-\begin{center}
-    $\square_a \varphi \nRightarrow Sb_a \varphi$
-\end{center}
-
-The thought that Albert can be drunk can only be gained by new information, but
-it's not strongly believed initially:
-
-\begin{center}
-\begin{tikzpicture}[scale=0.2]
-\tikzstyle{every node}+=[inner sep=0pt]
-\draw [black] (7.55,-6.55) circle (3);
-\draw (7.55,-6.55) node {$d,\mbox{ }g$};
-\draw [black] (18.35,-6.55) circle (3);
-\draw (18.35,-6.55) node {$d,\mbox{ }~g$};
-\draw [black] (29.55,-6.55) circle (3);
-\draw (29.55,-6.55) node {$~d,\mbox{ }g$};
-\draw [black] (10.55,-6.55) -- (15.35,-6.55);
-\fill [black] (15.35,-6.55) -- (14.55,-6.05) -- (14.55,-7.05);
-\draw [black] (21.35,-6.55) -- (26.55,-6.55);
-\fill [black] (26.55,-6.55) -- (25.75,-6.05) -- (25.75,-7.05);
-\end{tikzpicture}
-\end{center}
+	\item \textit{Prove semantically the equivalence claimed on Slide 24 of 
+		Lecture Notes 4.2:}
+		$$B_a \varphi \Leftrightarrow \Diamond_a \square_a \varphi$$
+		where $\Diamond_a \varphi \coloneqq \neg \square_a \neg \varphi$ is the dual 
+		modality to safe belief $\square_a$.
+		
+		[ANSWER HERE]
+	
+	\item \textit{Prove (via a counterexample) that \textbf{safe belief does NOT 
+		imply strong belief}; i.e. that}
+		$$\square_a \varphi \not\Rightarrow Sb_a \varphi$$
+		[ANSWER HERE]
+		
+		The thought that Albert can be drunk can only be gained by new information, but
+		it's not strongly believed initially:
+		
+		\begin{center}
+		\begin{tikzpicture}[scale=0.2]
+		\tikzstyle{every node}+=[inner sep=0pt]
+		\draw [black] (7.55,-6.55) circle (3);
+		\draw (7.55,-6.55) node {$d,\mbox{ }g$};
+		\draw [black] (18.35,-6.55) circle (3);
+		\draw (18.35,-6.55) node {$d,\mbox{ }~g$};
+		\draw [black] (29.55,-6.55) circle (3);
+		\draw (29.55,-6.55) node {$~d,\mbox{ }g$};
+		\draw [black] (10.55,-6.55) -- (15.35,-6.55);
+		\fill [black] (15.35,-6.55) -- (14.55,-6.05) -- (14.55,-7.05);
+		\draw [black] (21.35,-6.55) -- (26.55,-6.55);
+		\fill [black] (26.55,-6.55) -- (25.75,-6.05) -- (25.75,-7.05);
+		\end{tikzpicture}
+		\end{center}
+		\end{enumerate}
 
 \textbf{HINT}: The positive statements (a) and (b) need general proofs: you
-need to show that, for every plausibility model and every sentence $\phi$, the
-desired formula is true at all the worlds of that model. But the negative
-statement (c) must be shown by giving a counterexample: construct some
-plausibility model and find some sentence $\varphi$ for which the implication
-fails to be true at some world of that model (which we can think of as the
-“real world”).
+need to show that, for \textit{every} plausibility model and \textit{every 
+sentence} $\phi$, the desired formula is true at \textit{all} the worlds of 
+that model. But the negative statement (c) must be shown by giving a 
+counterexample: construct \textit{some} plausibility model and find 
+\textit{some} sentence $\varphi$ for which the implication fails to be true 
+at \textit{some} world of that model (which we can think of as the ``real 
+world'').
 
 %%%%%%%%%%%%%%%%
 %% Exercise 2 %%
