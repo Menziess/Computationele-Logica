@@ -39,9 +39,9 @@ W:best_a(\lVert\varphi\rVert_M \cap s(a)) \subseteq \lVert\psi\rVert_M\}$
 %% Exercise 1 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 1}
-For this exercise, please use the semantic definitions (given in the slides of 
-Lectures 4.1 and 4.2) of knowledge $K\varphi$ in plausibility models, belief 
-$B\varphi$, conditional belief $B^\varphi \psi$ and safe belief $\square 
+For this exercise, please use the semantic definitions (given in the slides of
+Lectures 4.1 and 4.2) of knowledge $K\varphi$ in plausibility models, belief
+$B\varphi$, conditional belief $B^\varphi \psi$ and safe belief $\square
 \varphi$ (defined as the Kripke modality for the plausibility relation).
 
 \begin{enumerate}[label=(\alph*)]
@@ -52,37 +52,37 @@ $B\varphi$, conditional belief $B^\varphi \psi$ and safe belief $\square
 
 		Therefore for all $t \in s(a)$ it's true that: $t \models_M
 		\varphi$.
-		
+
 		Using conditional belief:
 		$\lVert B_a^{\neg \varphi}false\rVert_M=\{v\in W:best_a(\lVert\neg\varphi\rVert_M\cap v(a))\subseteq\lVert false\rVert_M\}$
 
 Eliminating any world or all worlds either results in a world from s(a), where $K_a \varphi$, or no worlds at all, so $false$.
 
-	\item \textit{Prove semantically the equivalence claimed on Slide 24 of 
+	\item \textit{Prove semantically the equivalence claimed on Slide 24 of
 		Lecture Notes 4.2:}
 		$$B_a \varphi \Leftrightarrow \Diamond_a \square_a \varphi$$
-		where $\Diamond_a \varphi \coloneqq \neg \square_a \neg \varphi$ is the dual 
+		where $\Diamond_a \varphi \coloneqq \neg \square_a \neg \varphi$ is the dual
 		modality to safe belief $\square_a$.
-		
+
 		[ANSWER HERE]
-	
-	\item \textit{Prove (via a counterexample) that \textbf{safe belief does NOT 
+
+	\item \textit{Prove (via a counterexample) that \textbf{safe belief does NOT
 		imply strong belief}; i.e. that}
 		$$\square_a \varphi \not\Rightarrow Sb_a \varphi$$
-		[ANSWER HERE]
-		
-		The thought that Albert can be drunk can only be gained by new information, but
-		it's not strongly believed initially:
-		
+
+        Safe belief in world s means that $t \models \varphi$ for all $t$ such that $s \leq_a t$. The real world is denoted by *, in this world, there are no arrows pointing towards worlds in which $\varphi$ is not true.
+
+        Strong belief implies that all $\varphi$ worlds are strictly more plausible than all non-$\varphi$ worlds.
+
 		\begin{center}
 		\begin{tikzpicture}[scale=0.2]
 		\tikzstyle{every node}+=[inner sep=0pt]
 		\draw [black] (7.55,-6.55) circle (3);
-		\draw (7.55,-6.55) node {$d,\mbox{ }g$};
+		\draw (7.55,-6.55) node {$\varphi$};
 		\draw [black] (18.35,-6.55) circle (3);
-		\draw (18.35,-6.55) node {$d,\mbox{ }~g$};
+		\draw (18.35,-6.55) node {$\neg \varphi$};
 		\draw [black] (29.55,-6.55) circle (3);
-		\draw (29.55,-6.55) node {$~d,\mbox{ }g$};
+		\draw (29.55,-6.55) node {$\qquad \varphi \qquad *$};
 		\draw [black] (10.55,-6.55) -- (15.35,-6.55);
 		\fill [black] (15.35,-6.55) -- (14.55,-6.05) -- (14.55,-7.05);
 		\draw [black] (21.35,-6.55) -- (26.55,-6.55);
@@ -92,12 +92,12 @@ Eliminating any world or all worlds either results in a world from s(a), where $
 		\end{enumerate}
 
 \textbf{HINT}: The positive statements (a) and (b) need general proofs: you
-need to show that, for \textit{every} plausibility model and \textit{every 
-sentence} $\phi$, the desired formula is true at \textit{all} the worlds of 
-that model. But the negative statement (c) must be shown by giving a 
-counterexample: construct \textit{some} plausibility model and find 
-\textit{some} sentence $\varphi$ for which the implication fails to be true 
-at \textit{some} world of that model (which we can think of as the ``real 
+need to show that, for \textit{every} plausibility model and \textit{every
+sentence} $\phi$, the desired formula is true at \textit{all} the worlds of
+that model. But the negative statement (c) must be shown by giving a
+counterexample: construct \textit{some} plausibility model and find
+\textit{some} sentence $\varphi$ for which the implication fails to be true
+at \textit{some} world of that model (which we can think of as the ``real
 world'').
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -105,36 +105,36 @@ world'').
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 2}
 
-A virtual agent in a video game doesn't know his current position in the 
+A virtual agent in a video game doesn't know his current position in the
 virtual space, but all he cares is (a) whether or not he's in a ``Dangerous''
-zone (say, close to a dangerous monster), and (b) whether or not he's close to 
-this Target (say, a treasure). Let's use the letter $d$ to denote the sentence 
-\textit{the agent is in a dangerous zone}, and the letter $t$ to denote the 
-sentence \textit{the agent is close to the target}. These possibilities are 
-independent of each other, and the agent \textbf{doesn't know} which is the 
+zone (say, close to a dangerous monster), and (b) whether or not he's close to
+this Target (say, a treasure). Let's use the letter $d$ to denote the sentence
+\textit{the agent is in a dangerous zone}, and the letter $t$ to denote the
+sentence \textit{the agent is close to the target}. These possibilities are
+independent of each other, and the agent \textbf{doesn't know} which is the
 case, so he \textbf{cannot exclude any} of the four possible cases $d \land t$,
- $d \land \neg t$, $\neg d \land t$ and $\neg d \land \neg t$. However, our 
+ $d \land \neg t$, $\neg d \land t$ and $\neg d \land \neg t$. However, our
 agent \textbf{believes both} that he's close to the target AND that he's NOT in
- a dangerous zone. \textbf{If} he would learn that this belief is WRONG (i.e. 
+ a dangerous zone. \textbf{If} he would learn that this belief is WRONG (i.e.
 that at least one of his two beliefs is false), then he'd still believe (
-conditional on this new information) that he is close to the target. But 
-\textbf{if} he would learn instead that he's far from (=NOT close to) the 
-target, then (conditional on this information) he'd keep his initial belief 
+conditional on this new information) that he is close to the target. But
+\textbf{if} he would learn instead that he's far from (=NOT close to) the
+target, then (conditional on this information) he'd keep his initial belief
 that he's NOT in a dangerous zone.
 
 \begin{enumerate}
     \item \textit{Write down a logical formula in the language of beliefs,
     knowledge and conditional beliefs to encode all the above assumptions.}
-    
+
     $\neg K(t) \land \neg K(\neg t) \land \neg K(d) \land \neg K(\neg d) \land
-    B(t \land \neg d) \land B^{\neg (t \land \neg d)}(t) \land 
+    B(t \land \neg d) \land B^{\neg (t \land \neg d)}(t) \land
     B^{\neg t}(\neg d)$
 
     \item \textit{Represent the agent's beliefs (and conditional beliefs),
-    using a \textbf{plausibility model} with four possible worlds. Specify the 
-    \textbf{valuation} (which atomic sentences of the two atomic sentences $d$ 
-    and $t$ are true at which worlds). Represent the agent's 
-    \textbf{plausibility relation} on these worlds, by drawing arrows going 
+    using a \textbf{plausibility model} with four possible worlds. Specify the
+    \textbf{valuation} (which atomic sentences of the two atomic sentences $d$
+    and $t$ are true at which worlds). Represent the agent's
+    \textbf{plausibility relation} on these worlds, by drawing arrows going
     from the less plausible worlds to the more plausible ones.}
 
     \begin{center}
@@ -157,15 +157,15 @@ that he's NOT in a dangerous zone.
     \end{tikzpicture}
     \end{center}
 
-    \item \textit{Suppose somebody who never lies tells our agent ``You are 
-    close to the target if and only if you believe that you are in a dangerous 
-    zone.'' \textbf{Write down formally} this sentence as a formula $\varphi$ 
+    \item \textit{Suppose somebody who never lies tells our agent ``You are
+    close to the target if and only if you believe that you are in a dangerous
+    zone.'' \textbf{Write down formally} this sentence as a formula $\varphi$
     in doxastic logic (using the atomic sentences).}
 
     $\varphi \coloneqq t \leftrightarrow B(d)$
 
     \item \textit{Interpreting the above truthful announcement $!\varphi$ as an
-     \textbf{update} with the sentence $\varphi$ in the previous part, 
+     \textbf{update} with the sentence $\varphi$ in the previous part,
     represent the \textbf{updated model}.}
 
     \begin{center}
@@ -188,23 +188,23 @@ that he's NOT in a dangerous zone.
     \end{tikzpicture}
     \end{center}
 
-    \item \textit{After the previous announcement, another truthful 
-    announcement is made: ``You are in a dangerous zone if and only if you 
-    don't believe that you are in a dangerous zone.'' \textbf{Write down 
-    formally} this sentence as a formula $\psi$ in doxastic logic (using the 
+    \item \textit{After the previous announcement, another truthful
+    announcement is made: ``You are in a dangerous zone if and only if you
+    don't believe that you are in a dangerous zone.'' \textbf{Write down
+    formally} this sentence as a formula $\psi$ in doxastic logic (using the
     atomic sentences).}
 
     $\psi \coloneqq d \leftrightarrow \neg B(d)$
 
-    \item \textit{\textbf{What is the real world}? (In other words, answer the 
-    question: is the agent in a dangerous zone or not, and is he close to the 
-    target or not?) \textbf{Justify your answer}, by interpreting the 
-    announcement in the previous part as a new update $!\psi$ and 
+    \item \textit{\textbf{What is the real world}? (In other words, answer the
+    question: is the agent in a dangerous zone or not, and is he close to the
+    target or not?) \textbf{Justify your answer}, by interpreting the
+    announcement in the previous part as a new update $!\psi$ and
     \textbf{representing the updated model}.}
 
-	Let S be the model of question 2.4. In S, $\psi$ holds only in world 
-	$(\neg t, \, d)$. In this world, $d$ is true and $\neg B(d)$ is true (because 
-	$B(d)$ is false, the agent believes $B(\neg d)$). In the other world, 
+	Let S be the model of question 2.4. In S, $\psi$ holds only in world
+	$(\neg t, \, d)$. In this world, $d$ is true and $\neg B(d)$ is true (because
+	$B(d)$ is false, the agent believes $B(\neg d)$). In the other world,
 	$(\neg t, \, \neg d)$, $d$ is false but $\neg B(d)$ is true, so $\psi$ doesn't
 	 hold here. Because $\psi$ is truthful, the real world is $(\neg t, \, d)$.
 
