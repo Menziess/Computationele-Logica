@@ -85,9 +85,18 @@ $B\varphi$, conditional belief $B^\varphi \psi$ and safe belief $\square
 		imply strong belief}; i.e. that}
 		$$\square_a \varphi \not\Rightarrow Sb_a \varphi$$
 
-        Safe belief in world s means that $t \models \varphi$ for all $t$ such that $s \leq_a t$. The real world is denoted by *, in this world, there are no arrows pointing towards worlds in which $\varphi$ is not true.
-
-        Strong belief implies that all $\varphi$ worlds are strictly more plausible than all non-$\varphi$ worlds.
+        Safe belief in some world $s$ means that $t \models \varphi$ for all $t$ such that 
+        $s \leq_a t$.\\
+        Strong belief implies that for all worlds reachable from that world, 
+        the $\varphi$-worlds are strictly more plausible than the 
+        non-$\varphi$-worlds.
+        
+        In the model below, the real world is denoted by *. In this world 
+        $\square_a \varphi$ holds (there are no $a$-arrows pointing towards 
+        worlds in which $\varphi$ is not true), but $Sb_a \varphi$ doesn't hold,
+         because not all non-$\varphi$-worlds reachable from the real world are
+          strictly more plausible than the $\varphi$-worlds reachable from the 
+         real world (the middle world is more plausible than the left world).
 
 		\begin{center}
 		\begin{tikzpicture}[scale=0.2]
@@ -97,7 +106,8 @@ $B\varphi$, conditional belief $B^\varphi \psi$ and safe belief $\square
 		\draw [black] (18.35,-6.55) circle (3);
 		\draw (18.35,-6.55) node {$\neg \varphi$};
 		\draw [black] (29.55,-6.55) circle (3);
-		\draw (29.55,-6.55) node {$\qquad \varphi \qquad *$};
+		\draw (29.55,-6.55) node {$\varphi$};
+		\draw (32.55,-3.55) node {$*$};
 		\draw [black] (10.55,-6.55) -- (15.35,-6.55);
 		\fill [black] (15.35,-6.55) -- (14.55,-6.05) -- (14.55,-7.05);
 		\draw [black] (21.35,-6.55) -- (26.55,-6.55);
