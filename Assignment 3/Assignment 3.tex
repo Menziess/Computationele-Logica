@@ -79,7 +79,44 @@ $B\varphi$, conditional belief $B^\varphi \psi$ and safe belief $\square
 		where $\Diamond_a \varphi \coloneqq \neg \square_a \neg \varphi$ is the dual
 		modality to safe belief $\square_a$.
 
-		[ANSWER HERE]
+		\textit{Proof.} Let \textbf{S} = $(S, \le_a, \sim_a, ||\cdot||)$ be an 
+		arbitrary plausibility model and $s \in S$ also be arbitrary.\\
+		To prove our equivalence, we need to prove two implications:
+		
+		\textbf{Proof of left-to-right direction 
+		($B_a \varphi \Rightarrow \Diamond_a \square_a \varphi$)}
+		
+		We assume $s \models B_a \varphi$. 
+		By the semantic definition of $B_a$, this means that 
+		$best_a s(a) \subseteq ||\varphi||$. 
+		Now we are going to show that the 
+		$best_a s(a) \subseteq ||\Diamond_a \square_a \varphi||$. 
+		To do so, we consider \textbf{any arbitrary element} $t \in best_a s(a)$. 
+		By definition of $best_a$, we have $u \le_a t$ for all $u \in s(a)$. 
+		Let $w \in s(a)$ be \textbf{any arbitrary state s.t.} $w \ge_a t$. 
+		Then, by transitivity of $\ge_a$, we must have $u \le_a w$ for all 
+		$u \in s(a)$. 
+		So we have $w \in best_a s(a)$. 
+		Since $best_a s(a) \subseteq ||\varphi||$, it follows that 
+		$w \in ||\varphi||$, i.e. $w \models \varphi$. 
+		Because $w$ is chosen arbitrary, it follows that 
+		$t \models \square_a \varphi$. 
+		Then, by reflexivity of $\le_a$, we must have 
+		$t \models \Diamond_a \square_a \varphi$. 
+		Because $t$ is chosen arbitrary, it follows that 
+		$best_a s(a) \subseteq ||\Diamond_a \square_a \varphi||$ and thus 
+		$s \models \Diamond_a \square_a \varphi$.
+		
+		\textbf{Proof of right-to-left direction 
+		($\Diamond_a \square_a \varphi \Rightarrow B_a \varphi$)}
+ 
+ 		We assume $s \models \Diamond_a \square_a \varphi$. 
+ 		By semantics of $\Diamond_a$ and $\square_a$, this means that there is a 
+ 		$t$ for which it holds that $t \ge_a s$ s.t. for all 
+ 		$u \ge_a t$: $u \models \varphi$. 
+ 		Then, by transitivity of $\ge_a$, it follows that $u \ge_a s$.
+ 		By semantics of $B_a$, it follows that $s \models B_a \varphi$.
+		\hfill $\square$
 
 	\item \textit{Prove (via a counterexample) that \textbf{safe belief does NOT
 		imply strong belief}; i.e. that}
