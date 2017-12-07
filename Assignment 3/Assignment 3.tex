@@ -47,30 +47,30 @@ $B\varphi$, conditional belief $B^\varphi \psi$ and safe belief $\square
 \begin{enumerate}[label=(\alph*)]
 	\item \textit{Show the following equivalence:}
 		$$K_a \varphi \Leftrightarrow B_a^{\neg \varphi} false$$
-		\textit{Proof.} Let \textbf{S} = $(S, \le_a, \sim_a, ||\cdot||)$ be an 
+		\textit{Proof.} Let \textbf{S} = $(S, \le_a, \sim_a, ||\cdot||)$ be an
 		arbitrary plausibility model and $s \in S$ also be arbitrary.\\
 		To prove our equivalence, we need to prove two implications:
-		
-		\textbf{Proof of left-to-right direction 
+
+		\textbf{Proof of left-to-right direction
 		($K_a \varphi \Rightarrow B_a^{\neg \varphi} false$)}
-		
+
 		We assume that $s \models K_a \varphi$. By the semantic definition of $K_a$,
-		this means that $s(a) \subseteq ||\varphi||$ (1). By definition of $best_a$, 
-		$best_a(||\neg \varphi|| \cap s(a)) \subseteq 
-		(||\neg \varphi|| \cap s(a))$. From (1), it follows that 
-		$(||\neg \varphi|| \cap s(a)) = \emptyset \subseteq ||false||$. By the 
-		semantic definition of conditional belief, this means that 
+		this means that $s(a) \subseteq ||\varphi||$ (1). By definition of $best_a$,
+		$best_a(||\neg \varphi|| \cap s(a)) \subseteq
+		(||\neg \varphi|| \cap s(a))$. From (1), it follows that
+		$(||\neg \varphi|| \cap s(a)) = \emptyset \subseteq ||false||$. By the
+		semantic definition of conditional belief, this means that
 		$s \models B_a^{\neg \varphi} false$.
-		
-		\textbf{Proof of right-to-left direction 
+
+		\textbf{Proof of right-to-left direction
 		($B_a^{\neg \varphi} false \Rightarrow K_a \varphi$)}
-		
-		We assume that $s \models B_a^{\neg \varphi} false$. By the semantic 
-		definition of conditional belief, this means that 
-		$best_a(||\neg \varphi|| \cap s(a)) \subseteq (||\neg \varphi|| \cap s(a)) 
-		\subseteq ||false||$. $(||\neg \varphi|| \cap s(a)) \subseteq ||false||$ iff 
+
+		We assume that $s \models B_a^{\neg \varphi} false$. By the semantic
+		definition of conditional belief, this means that
+		$best_a(||\neg \varphi|| \cap s(a)) \subseteq (||\neg \varphi|| \cap s(a))
+		\subseteq ||false||$. $(||\neg \varphi|| \cap s(a)) \subseteq ||false||$ iff
 		$s(a) \subseteq ||\varphi||$. By the semantic definition of $K_a$, this means
-		 that $s \models K_a \varphi$. 
+		 that $s \models K_a \varphi$.
 		\hfill $\square$
 
 	\item \textit{Prove semantically the equivalence claimed on Slide 24 of
@@ -79,41 +79,41 @@ $B\varphi$, conditional belief $B^\varphi \psi$ and safe belief $\square
 		where $\Diamond_a \varphi \coloneqq \neg \square_a \neg \varphi$ is the dual
 		modality to safe belief $\square_a$.
 
-		\textit{Proof.} Let \textbf{S} = $(S, \le_a, \sim_a, ||\cdot||)$ be an 
+		\textit{Proof.} Let \textbf{S} = $(S, \le_a, \sim_a, ||\cdot||)$ be an
 		arbitrary plausibility model and $s \in S$ also be arbitrary.\\
 		To prove our equivalence, we need to prove two implications:
-		
-		\textbf{Proof of left-to-right direction 
+
+		\textbf{Proof of left-to-right direction
 		($B_a \varphi \Rightarrow \Diamond_a \square_a \varphi$)}
-		
-		We assume $s \models B_a \varphi$. 
-		By the semantic definition of $B_a$, this means that 
-		$best_a s(a) \subseteq ||\varphi||$. 
-		Now we are going to show that the 
-		$best_a s(a) \subseteq ||\Diamond_a \square_a \varphi||$. 
-		To do so, we consider \textbf{any arbitrary element} $t \in best_a s(a)$. 
-		By definition of $best_a$, we have $u \le_a t$ for all $u \in s(a)$. 
-		Let $w \in s(a)$ be \textbf{any arbitrary state s.t.} $w \ge_a t$. 
-		Then, by transitivity of $\ge_a$, we must have $u \le_a w$ for all 
-		$u \in s(a)$. 
-		So we have $w \in best_a s(a)$. 
-		Since $best_a s(a) \subseteq ||\varphi||$, it follows that 
-		$w \in ||\varphi||$, i.e. $w \models \varphi$. 
-		Because $w$ is chosen arbitrary, it follows that 
-		$t \models \square_a \varphi$. 
-		Then, by reflexivity of $\le_a$, we must have 
-		$t \models \Diamond_a \square_a \varphi$. 
-		Because $t$ is chosen arbitrary, it follows that 
-		$best_a s(a) \subseteq ||\Diamond_a \square_a \varphi||$ and thus 
+
+		We assume $s \models B_a \varphi$.
+		By the semantic definition of $B_a$, this means that
+		$best_a s(a) \subseteq ||\varphi||$.
+		Now we are going to show that the
+		$best_a s(a) \subseteq ||\Diamond_a \square_a \varphi||$.
+		To do so, we consider \textbf{any arbitrary element} $t \in best_a s(a)$.
+		By definition of $best_a$, we have $u \le_a t$ for all $u \in s(a)$.
+		Let $w \in s(a)$ be \textbf{any arbitrary state s.t.} $w \ge_a t$.
+		Then, by transitivity of $\ge_a$, we must have $u \le_a w$ for all
+		$u \in s(a)$.
+		So we have $w \in best_a s(a)$.
+		Since $best_a s(a) \subseteq ||\varphi||$, it follows that
+		$w \in ||\varphi||$, i.e. $w \models \varphi$.
+		Because $w$ is chosen arbitrary, it follows that
+		$t \models \square_a \varphi$.
+		Then, by reflexivity of $\le_a$, we must have
+		$t \models \Diamond_a \square_a \varphi$.
+		Because $t$ is chosen arbitrary, it follows that
+		$best_a s(a) \subseteq ||\Diamond_a \square_a \varphi||$ and thus
 		$s \models \Diamond_a \square_a \varphi$.
-		
-		\textbf{Proof of right-to-left direction 
+
+		\textbf{Proof of right-to-left direction
 		($\Diamond_a \square_a \varphi \Rightarrow B_a \varphi$)}
- 
- 		We assume $s \models \Diamond_a \square_a \varphi$. 
- 		By semantics of $\Diamond_a$ and $\square_a$, this means that there is a 
- 		$t$ for which it holds that $t \ge_a s$ s.t. for all 
- 		$u \ge_a t$: $u \models \varphi$. 
+
+ 		We assume $s \models \Diamond_a \square_a \varphi$.
+ 		By semantics of $\Diamond_a$ and $\square_a$, this means that there is a
+ 		$t$ for which it holds that $t \ge_a s$ s.t. for all
+ 		$u \ge_a t$: $u \models \varphi$.
  		Then, by transitivity of $\ge_a$, it follows that $u \ge_a s$.
  		By semantics of $B_a$, it follows that $s \models B_a \varphi$.
 		\hfill $\square$
@@ -122,17 +122,17 @@ $B\varphi$, conditional belief $B^\varphi \psi$ and safe belief $\square
 		imply strong belief}; i.e. that}
 		$$\square_a \varphi \not\Rightarrow Sb_a \varphi$$
 
-        Safe belief in some world $s$ means that $t \models \varphi$ for all $t$ such that 
+        Safe belief in some world $s$ means that $t \models \varphi$ for all $t$ such that
         $s \leq_a t$.\\
-        Strong belief implies that for all worlds reachable from that world, 
-        the $\varphi$-worlds are strictly more plausible than the 
+        Strong belief implies that for all worlds reachable from that world,
+        the $\varphi$-worlds are strictly more plausible than the
         non-$\varphi$-worlds.
-        
-        In the model below, the real world is denoted by *. In this world 
-        $\square_a \varphi$ holds (there are no $a$-arrows pointing towards 
+
+        In the model below, the real world is denoted by *. In this world
+        $\square_a \varphi$ holds (there are no $a$-arrows pointing towards
         worlds in which $\varphi$ is not true), but $Sb_a \varphi$ doesn't hold,
          because not all non-$\varphi$-worlds reachable from the real world are
-          strictly more plausible than the $\varphi$-worlds reachable from the 
+          strictly more plausible than the $\varphi$-worlds reachable from the
          real world (the middle world is more plausible than the left world).
 
 		\begin{center}
