@@ -47,16 +47,31 @@ $B\varphi$, conditional belief $B^\varphi \psi$ and safe belief $\square
 \begin{enumerate}[label=(\alph*)]
 	\item \textit{Show the following equivalence:}
 		$$K_a \varphi \Leftrightarrow B_a^{\neg \varphi} false$$
-		[ANSWER HERE]
-		Take $s \in W$ such that $s \models_M K_a \varphi$.
-
-		Therefore for all $t \in s(a)$ it's true that: $t \models_M
-		\varphi$.
+		\textit{Proof.} Let \textbf{S} = $(S, \le_a, \sim_a, ||\cdot||)$ be an 
+		arbitrary plausibility model and $s \in S$ also be arbitrary.\\
+		To prove our equivalence, we need to prove two implications:
 		
-		Using conditional belief:
-		$\lVert B_a^{\neg \varphi}false\rVert_M=\{v\in W:best_a(\lVert\neg\varphi\rVert_M\cap v(a))\subseteq\lVert false\rVert_M\}$
-
-Eliminating any world or all worlds either results in a world from s(a), where $K_a \varphi$, or no worlds at all, so $false$.
+		\textbf{Proof of left-to-right direction 
+		($K_a \varphi \Rightarrow B_a^{\neg \varphi} false$)}
+		
+		We assume that $s \models K_a \varphi$. By the semantic definition of $K_a$,
+		this means that $s(a) \subseteq ||\varphi||$ (1). By definition of $best_a$, 
+		$best_a(||\neg \varphi|| \cap s(a)) \subseteq 
+		(||\neg \varphi|| \cap s(a))$. From (1), it follows that 
+		$(||\neg \varphi|| \cap s(a)) = \emptyset \subseteq ||false||$. By the 
+		semantic definition of conditional belief, this means that 
+		$s \models B_a^{\neg \varphi} false$.
+		
+		\textbf{Proof of right-to-left direction 
+		($B_a^{\neg \varphi} false \Rightarrow K_a \varphi$)}
+		
+		We assume that $s \models B_a^{\neg \varphi} false$. By the semantic 
+		definition of conditional belief, this means that 
+		$best_a(||\neg \varphi|| \cap s(a)) \subseteq (||\neg \varphi|| \cap s(a)) 
+		\subseteq ||false||$. $(||\neg \varphi|| \cap s(a)) \subseteq ||false||$ iff 
+		$s(a) \subseteq ||\varphi||$. By the semantic definition of $K_a$, this means
+		 that $s \models K_a \varphi$. 
+		\hfill $\square$
 
 	\item \textit{Prove semantically the equivalence claimed on Slide 24 of 
 		Lecture Notes 4.2:}
