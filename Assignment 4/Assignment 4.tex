@@ -149,10 +149,11 @@ for sure (since the sensors might malfunction).
 
 	This is true in states: 1 and 3.
 
-	\item \textit{Assume that the controller is known to be infallible, and so
-	that the robot performs an update with the announced sentence. Represent the
-	robots’s new belief structure (as a plausibility model) after this update.
-	What does the robot believe about e and m after the update?}
+	\item Assume that the controller is known to be \textit{infallible}, and so 
+	that the robot performs an \textit{update} with the announced sentence. 
+	\textit{Represent the robot's new belief structure (as a plausibility model) 
+	after this update}. 
+	What does the robot believe about $e$ and $m$ after the update?
 
 	\begin{center}
 	\begin{tikzpicture}[scale=0.2]
@@ -165,11 +166,11 @@ for sure (since the sensors might malfunction).
 	\end{tikzpicture}
 	\end{center}
 
-	\item \textit{What would have been the final belief structure (plausibility
-	model) of the robot if the above three events happened in a different order,
-	namely: first the robot received the above message from the (infallible)
-	controller, then its (strongly trusted) sensor indicated vibrations (hence
-	enemies), and then its (strongly trusted) metal detector indicated a mine?}
+	\item What would have been the final belief structure (plausibility	model) of 
+	the robot if the above three events happened in \textit{a different order}, 
+	namely: first the robot received the above message from the (infallible) 
+	controller, then its (strongly trusted) sensor indicated vibrations (hence 
+	enemies), and then its (strongly trusted) metal detector indicated a mine?
 
 	After the infallible controller message, and after the sensor indicated
 	vibrations:
@@ -204,16 +205,15 @@ for sure (since the sensors might malfunction).
 %% Exercise 2 %%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section*{Exercise 2}
-A covered coin is on the table, lying either Heads up (H) or Tails up (T).
-There are two agents, Alice and Bob, and it is common knowledge that neither of
-them can see the coin, but that for some reason they both believe that the coin
-lies Tails up.
+A covered coin is on the table, lying either Heads up ($H$) or Tails up ($T$). 
+There are two agents, Alice and Bob, and \textit{it is common knowledge that 
+neither of them can see the coin, but that for some reason they both believe 
+that the coin lies Tails up}.
 
 \begin{enumerate}
-
-	\item \textit{Draw a multi-agent plausibility model M0 (with two agents, a
-	for Alice and b for Bob, and atomic sentence H and T) to accurately represent
-	all the information above.}
+	\item \textit{Draw a multi-agent plausibility model} \textbf{M$_0$} (with two 
+	agents, $a$ for Alice and $b$ for Bob, and atomic sentence $H$ and $T$) to 
+	accurately represent all the information above.
 
 	\begin{center}
 	\begin{tikzpicture}[scale=0.2]
@@ -228,9 +228,13 @@ lies Tails up.
 	\end{tikzpicture}
 	\end{center}
 
-	\item \textit{Some external referee publicly announces: “The coin lies Heads
-	up”. It is common knowledge that: Bob strongly trusts the referee, but that
-	Alice is neutral towards the referee (neither trusts nor distrusts him).}
+	\item Some external referee publicly announces: ``\textit{The coin lies Heads 
+	up}''. 
+	It is \textit{common knowledge that: Bob strongly trusts the referee, but 
+	that Alice is neutral towards the referee} (neither trusts nor distrusts him).
+	
+	\textit{Represent} this action an an \textbf{event plausibility model} 
+	\boldmath{$\Sigma$}.
 
 	\begin{center}
 	\begin{tikzpicture}[scale=0.2]
@@ -250,8 +254,10 @@ lies Tails up.
 	\end{tikzpicture}
 	\end{center}
 
-	\item \textit{Represent (draw) a model for the situation after the action
-	described in the previous part.}
+	\item \textit{Represent (draw) a model} \textbf{M$_1$} for the situation 
+	\textit{after} the action described in the previous part, by computing the 
+	Action-Priority update \textbf{M}$_1$ = \textbf{M$_0$} $\otimes$ 
+	\boldmath{$\Sigma$}.
 
 	\begin{center}
 	\begin{tikzpicture}[scale=0.2]
@@ -269,7 +275,26 @@ lies Tails up.
 	\end{tikzpicture}
 	\end{center}
 
-	\item \textit{Represent this action as an event plausibility model.}
+	\item We now change the scenario as follows. 
+	It is \textit{still common knowledge that Bob strongly trusts the referee}, 
+	but Alice's attitude is NOT common knowledge. 
+	Instead, it is common knowledge that: \textit{either Alice strongly trusts 
+	the referee, or she is neutral (neither trusting nor distrusting), or she 
+	strongly distrusts him}. 
+	Moreover, it is also common knowledge that: \textit{Bob believes that Alice 
+	trusts the referee}; but that, \textit{IF given that this belief is wrong, 
+	he'd believe that she's neutral} (rather than that she is strongly 
+	distrusting the referee).
+	
+	Of course, we also assume \textit{each agent knows his/her own attitude}.
+	
+	As before, the referee publicly announces: 
+	``\textit{The coin lies Heads up}''. 
+	
+	\textit{Represent} this action as an \textbf{event plausibility model} 
+	\boldmath{$\Sigma'$}.
+	
+	HINT: This is a plausibility event model with 6 actions.
 
 	\begin{center}
 	\begin{tikzpicture}[scale=0.2]
@@ -321,8 +346,12 @@ lies Tails up.
 	\end{tikzpicture}
 	\end{center}
 
-	\item \textit{Starting from the original situation (in part 1), suppose the
-	action that we described in the previous part happens.}
+	\item Starting from the original situation (in part 1), suppose the	action 
+	that we described in the previous part happens. 
+	
+	\textit{Represent (draw) a model} \textbf{M$_1'$} for the situation 
+	\textit{after} this action, by computing the Action-Priority update 
+	\textbf{M$'_1$} = \textbf{M$_0$} $\otimes$ \boldmath{$\Sigma'$}.
 
 	\begin{center}
 	\begin{tikzpicture}[scale=0.2]
