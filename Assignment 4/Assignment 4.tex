@@ -65,12 +65,13 @@ for sure (since the sensors might malfunction).
 	\begin{tikzpicture}[scale=0.2]
 	\tikzstyle{every node}+=[inner sep=0pt]
 	\draw [black] (35.95,-14.6) circle (3);
-	\draw (35.95,-14.6) node {$e$};
+	\draw (35.95,-14.6) node {$e, \neg m$};
 	\draw [black] (50.35,-14.6) circle (3);
-	\draw (50.35,-14.6) node {$m$};
+	\draw (50.35,-14.6) node {$\neg e, m$};
 	\draw [black] (63.6,-14.6) circle (3);
+	\draw (63.6,-14.6) node {$\neg e, \neg m$};
 	\draw [black] (22.5,-14.6) circle (3);
-	\draw (22.5,-14.6) node {$m,\mbox{ }e$};
+	\draw (22.5,-14.6) node {$e, m$};
 	\draw [black] (38.95,-14.6) -- (47.35,-14.6);
 	\fill [black] (47.35,-14.6) -- (46.55,-14.1) -- (46.55,-15.1);
 	\draw [black] (47.35,-14.6) -- (38.95,-14.6);
@@ -94,12 +95,13 @@ for sure (since the sensors might malfunction).
 	\begin{tikzpicture}[scale=0.2]
 	\tikzstyle{every node}+=[inner sep=0pt]
 	\draw [black] (65.45,-11.7) circle (3);
-	\draw (65.45,-11.7) node {$e$};
+	\draw (65.45,-11.7) node {$e, \neg m$};
 	\draw [black] (17.95,-11.7) circle (3);
-	\draw (17.95,-11.7) node {$m$};
+	\draw (17.95,-11.7) node {$\neg e, m$};
 	\draw [black] (33.9,-11.7) circle (3);
+	\draw (33.9,-11.7) node {$\neg e, \neg m$};
 	\draw [black] (49.2,-11.7) circle (3);
-	\draw (49.2,-11.7) node {$m,\mbox{ }e$};
+	\draw (49.2,-11.7) node {$e, m$};
 	\draw [black] (20.95,-11.7) -- (30.9,-11.7);
 	\fill [black] (30.9,-11.7) -- (30.1,-11.2) -- (30.1,-12.2);
 	\draw [black] (36.9,-11.7) -- (46.2,-11.7);
@@ -121,12 +123,13 @@ for sure (since the sensors might malfunction).
 	\begin{tikzpicture}[scale=0.2]
 	\tikzstyle{every node}+=[inner sep=0pt]
 	\draw [black] (35.95,-22.9) circle (3);
-	\draw (35.95,-22.9) node {$e$};
+	\draw (35.95,-22.9) node {$e, \neg m$};
 	\draw [black] (50.85,-22.9) circle (3);
-	\draw (50.85,-22.9) node {$m$};
+	\draw (50.85,-22.9) node {$\neg e, m$};
 	\draw [black] (21.4,-22.9) circle (3);
+	\draw (21.4,-22.9) node {$\neg e, \neg m$};
 	\draw [black] (65.45,-22.9) circle (3);
-	\draw (65.45,-22.9) node {$m,\mbox{ }e$};
+	\draw (65.45,-22.9) node {$e, m$};
 	\draw [black] (24.4,-22.9) -- (32.95,-22.9);
 	\fill [black] (32.95,-22.9) -- (32.15,-22.4) -- (32.15,-23.4);
 	\draw [black] (38.95,-22.9) -- (47.85,-22.9);
@@ -145,9 +148,9 @@ for sure (since the sensors might malfunction).
 	Write this sentence formally, and determine in which possible states it is 
 	true.}
 
-	$\varphi \coloneqq Be \rightarrow \neg e \wedge B\neg e \rightarrow e$
+	$\varphi \coloneqq (Be \rightarrow \neg e) \land (B\neg e \rightarrow e)$
 
-	This is true in states: 1 and 3.
+	$\varphi$ is true in: $\{(\neg e, \neg m), (\neg e, m)\}$
 
 	\item Assume that the controller is known to be \textit{infallible}, and so 
 	that the robot performs an \textit{update} with the announced sentence. 
@@ -159,8 +162,9 @@ for sure (since the sensors might malfunction).
 	\begin{tikzpicture}[scale=0.2]
 	\tikzstyle{every node}+=[inner sep=0pt]
 	\draw [black] (50.85,-22.9) circle (3);
-	\draw (50.85,-22.9) node {$m$};
+	\draw (50.85,-22.9) node {$\neg e, m$};
 	\draw [black] (21.4,-22.9) circle (3);
+	\draw (21.4,-22.9) node {$\neg e, \neg m$};
 	\draw [black] (24.4,-22.9) -- (47.85,-22.9);
 	\fill [black] (47.85,-22.9) -- (47.05,-22.4) -- (47.05,-23.4);
 	\end{tikzpicture}
@@ -178,9 +182,9 @@ for sure (since the sensors might malfunction).
 	\begin{tikzpicture}[scale=0.2]
 	\tikzstyle{every node}+=[inner sep=0pt]
 	\draw [black] (39.15,-22.9) circle (3);
-	\draw (39.15,-22.9) node {$e$};
+	\draw (39.15,-22.9) node {$e, \neg m$};
 	\draw [black] (27.4,-22.9) circle (3);
-	\draw (27.4,-22.9) node {$m,\mbox{ }e$};
+	\draw (27.4,-22.9) node {$e, m$};
 	\draw [black] (30.4,-22.9) -- (36.15,-22.9);
 	\fill [black] (36.15,-22.9) -- (35.35,-22.4) -- (35.35,-23.4);
 	\end{tikzpicture}
@@ -191,9 +195,9 @@ for sure (since the sensors might malfunction).
 	\begin{tikzpicture}[scale=0.2]
 	\tikzstyle{every node}+=[inner sep=0pt]
 	\draw [black] (39.15,-22.9) circle (3);
-	\draw (39.15,-22.9) node {$m,\mbox{ }e$};
+	\draw (39.15,-22.9) node {$e, m$};
 	\draw [black] (27.4,-22.9) circle (3);
-	\draw (27.4,-22.9) node {$e$};
+	\draw (27.4,-22.9) node {$e, \neg m$};
 	\draw [black] (30.4,-22.9) -- (36.15,-22.9);
 	\fill [black] (36.15,-22.9) -- (35.35,-22.4) -- (35.35,-23.4);
 	\end{tikzpicture}
