@@ -30,9 +30,9 @@
 
 \begin{enumerate}
 	\item The sentence $\theta$ encoding all information:
-	   
+
     Alice and Bob have red hats, Alice knows that Bob has a red hat, Bob knows Alice has a red hat, the queen knows Alice and Bob have red hats, the queen knows that Alice knows that Bob has a red hat, the queen knows that Bob knows that Alice has a red hat. It is common knowledge that the queen knows the color of Alice's and Bob's hats, it is common knowledge that Alice knows the color of Bob's hat, it is common knowledge that Bob knows the color of Alice's hat, it is common knowledge that Alice and Bob don't know the color of their own hats, it is common knowledge that both Alice and Bob know that they have either a red or white hat and it is common knowledge that there are two red hats and one white hat.
-    
+
     $\theta = r_a \land r_b \land K_a(r_b) \land K_b(r_a) \land K_q(r_a) \land K_q(r_b) \land K_q(K_a(r_b)) \land K_q(K_b(r_a)) \land CK(K_q(r_a \lor w_a)) \land CK(K_q(r_b \lor w_b)) \land CK(K_a(r_b \lor w_b)) \land CK(K_b(r_a \lor w_a)) \land CK(\neg K_a(r_a)) \land CK(\neg K_a(\neg r_a)) \land CK(\neg K_a(w_a)) \land CK(\neg K_a(\neg w_a)) \land CK(\neg K_b(r_b)) \land CK(\neg K_b(\neg r_b)) \land CK(\neg K_b(w_b)) \land CK(\neg K_b(\neg w_b)) \land CK((r_a \land r_b) \lor (r_a \land w_b) \lor (w_a \land r_b))$
 
     \item A representation of the situation model \textbf{M}: \\
@@ -290,7 +290,7 @@ We mark real worlds/events with an $*$.
     \fill [black] (19.62,-34.76) -- (19.82,-35.68) -- (20.53,-34.98);
     \end{tikzpicture}
     \end{center}
-    
+
 	This is a doxastic model.
     \pagebreak
     \item Representation of model \textbf{M'}:
@@ -470,9 +470,9 @@ We mark real worlds/events with an $*$.
     $\bigotimes$ \textbf{$\Sigma$'} :
 	\begin{figure}
 		\centering
-		\includegraphics[scale=0.5]{model_2_5.jpeg}
+		\includegraphics[scale=0.5]{model_2_5.jpg}
 	\end{figure}
-	
+
 \end{enumerate}
 
 \newpage
@@ -486,7 +486,7 @@ In the following, each of the children will be asked a number of questions, whic
 
 \begin{enumerate}
     \item \textit{How many possible worlds} are there (that are consistent with the story above)?
-    
+
    	There are infinite possible worlds.
 
     \item \textit{Represent} \textbf{(draw) the above situation as an \textit{epistemic model} M$_1$}, with two agents ($a$ for Alice, $b$ for Bob), using pairs of numbers ($n_a$,$n_b$) as ``names'' for the possible worlds. \textbf{Draw the epistemic accessibility  relations} for each agent, but do \textit{not} worry about the valuation (yet), since no atomic sentences are given yet.
@@ -557,9 +557,9 @@ In the following, each of the children will be asked a number of questions, whic
     \end{center}
 
     \item For your model, consider now the following \textit{four atomic sentences} $0_a, 0_b, 1_a, 1_b$. Here, $0_a$ means ``Alice's number is equal to 0'' (i.e. $n_a = 0$), and $0_b$ means ``Bob's number is equal to 0'' (i.e. $n_b = 0$); $1_a$ means ``Alice's number is equal to 1'' (i.e. $n_a = 1$), and $1_b$ means ``Bob's number is equal to 1'' (i.e. $n_b = 1$). \textbf{Specify the valuation for these atomic sentences} in the above model.
-    
+
     We only learned how to valuate worlds, and the valuation of a world is the set of basic facts that are true in that world. So when we only consider the four atomic sentences above, we have as valuations:
-    
+
     \begin{itemize}[label={}]
     	\item $\nu((0, 1))= \{0_a, 1_b\}$
     	\item $\nu((1, 0))= \{1_a, 0_b\}$
@@ -567,26 +567,26 @@ In the following, each of the children will be asked a number of questions, whic
     	\item $\nu((1, 2))= \{1_a\}$
     	\item in all other worlds $v$: $\nu(v) = \emptyset$
     \end{itemize}
-    
+
     If we assume ``valuation of an atomic sentence'' means ``specify the set of worlds in which the atomic sentence is true'', then the valuations are:
-    
+
     \begin{itemize}[label={}]
     	\item $\nu(0_a)= \{(0, 1)\}$
     	\item $\nu(0_b)= \{(1, 0)\}$
     	\item $\nu(1_a)= \{(1, 0), (1, 2)\}$
     	\item $\nu(1_b)= \{(0, 1), (2, 1)\}$
-    \end{itemize}    
-    
+    \end{itemize}
+
     \item Alice is asked the following question: \textit{``Do you know whether your own number is equal to $0$ or not, and if so then which of the two?''} So her answers can be: (a) \textit{I don't know}, (b) \textit{I know that my number is equal to $0$}, or (c) \textit{I know that my number is NOT equal to $0$}.
-    
+
     Let us suppose that in fact \textit{Alice answers (c) ``I know that my number is NOT equal to $0$''}.
-    
+
     \textbf{Write down a sentence $\varphi$ in epistemic logic that expresses her \textit{answer}}.
-    
+
     $\varphi$ = K$_a(\neg 0_a)$
-    
+
     \item Interpreting the above answer as a truthful public announcement $!\varphi$ of the sentence written in the previous part, \textbf{represent (draw) the updated model M$_2$ = M$_1^{!\varphi}$ after this public announcement}.
-    
+
     For simplicity we skipped the loops (every world has an $a$- and $b$-arrow to itself) and we skipped a lot of $b$-arrows (every world has a $b$-arrow to every other world).
     \begin{center}
     \begin{tikzpicture}[scale=0.2]
@@ -643,23 +643,23 @@ In the following, each of the children will be asked a number of questions, whic
 	    \fill [black] (25,-47.6) -- (24.5,-48.4) -- (25.5,-48.4);
     \end{tikzpicture}
     \end{center}
-    
+
     \item Suppose now that, \textit{after} Alice answered as above, Bob is asked the ``same'' question: \textit{``Do you (Bob) know whether your own number is equal to $0$ or not, and if so then which of the two}?''
-    
+
     \textbf{What will Bob answer}? Also, \textbf{what will be updated model M$_3$ representing the situation after he answers}? Justify your answers!
-    
+
     Bob will answer (a) \textit{I don't know}, because in all worlds of M$_2$ Bob thinks every other world is possible (there are $b$-arrows going from each world to each other world). M$_3$ = M$_2$ (we cannot remove worlds), because there is no world in which Bob's answer (``I don't know'') is false.
-    
+
     \item After the previous round of questions, Alice is now asked the following question: \textit{``Do you know whether your own number is equal to $1$ or not, and if so then which of the two}?'' The asnwers can be: (a) \textit{I don't know}, (b) \textit{I know that my number is equal to $1$}, or (c) \textit{I know that my number is NOT equal to $1$}.
-    
+
 	Let us suppose that in fact \textit{Alice answers (a) ``I don't know''}.
-	
+
     \textbf{Write down a sentence $\psi$ in epistemic logic that expresses her \textit{answer}}.
-    
+
     $\psi$ = $\neg$K$_a(1_a) \land \neg$K$_a(\neg 1_a)$
-    
+
     \item Interpreting the above answer as a truthful public announcement $!\psi$ of the sentence written in the previous part, \textbf{represent (draw) the updated model M$_4$ = M$_3^{!\psi}$ after this public announcement}.
-    
+
     \begin{center}
 	\begin{tikzpicture}[scale=0.2]
 		\tikzstyle{every node}+=[inner sep=0pt]
@@ -680,11 +680,11 @@ In the following, each of the children will be asked a number of questions, whic
 		\fill [black] (39.97,-28) -- (40.74,-28.55) -- (40.81,-27.56);
 	\end{tikzpicture}
 	\end{center}
-    
+
     \item Suppose now that, \textit{after} Alice answered as above, Bob is asked the ``same'' question: \textit{``Do you (Bob) know whether your own number is equal to $1$ or not, and if so then which of the two}?''
-    
+
     \textbf{What will Bob answer}? Also, \textbf{what is his number}? Justify your answers!
-    
+
     Bob will answer (c) \textit{I know that my number is NOT equal to $1$}, because in M$_4$ there is no world in which Bob knows his number is 1 (there is no $b$-arrow to a world where $n_b=1$). $n_b = 2$, because in all possible worlds in M$_4$ Bob's number is 2.
 
 \end{enumerate}
